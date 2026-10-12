@@ -39,12 +39,12 @@ cd "$REPO_ROOT"
 cp "$SRC" "issues/$WEEK.md"
 trap 'rm -f "issues/$WEEK.md"' ERR
 python3 build.py
-trap - ERR
 
 BRANCH="$(git rev-parse --abbrev-ref HEAD)"
 [[ "$BRANCH" == "main" ]] || echo "publish: note — committing on branch '$BRANCH', not main" >&2
 git add "issues/$WEEK.md" index.html *.html
 git commit -m "publish $WEEK"
+trap - ERR
 
 if [[ $PUSH -eq 1 ]]; then
   git push origin "$BRANCH"
