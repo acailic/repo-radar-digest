@@ -37,7 +37,7 @@ fi
 
 cd "$REPO_ROOT"
 cp "$SRC" "issues/$WEEK.md"
-trap 'rm -f "issues/$WEEK.md"' ERR
+trap 'rm -f "issues/$WEEK.md" "$WEEK.html"' ERR
 python3 build.py
 
 BRANCH="$(git rev-parse --abbrev-ref HEAD)"
