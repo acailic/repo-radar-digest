@@ -37,7 +37,9 @@ fi
 
 cd "$REPO_ROOT"
 cp "$SRC" "issues/$WEEK.md"
+trap 'rm -f "issues/$WEEK.md"' ERR
 python3 build.py
+trap - ERR
 
 BRANCH="$(git rev-parse --abbrev-ref HEAD)"
 [[ "$BRANCH" == "main" ]] || echo "publish: note — committing on branch '$BRANCH', not main" >&2

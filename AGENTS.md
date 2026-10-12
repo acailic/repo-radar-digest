@@ -15,7 +15,7 @@ generated HTML lives at repo root because Pages serves root, not /docs).
   `python3 build.py` whenever an issue markdown changes.
 - `publish.sh <digest.md> [--push]` — the weekly intake: validates ISO-week
   name, copies into `issues/`, rebuilds, commits `publish <week>`. The private
-  radar calls it after each weekly run (wiring documented in README).
+  radar calls it after each weekly run.
 
 ## Decisions worth remembering
 

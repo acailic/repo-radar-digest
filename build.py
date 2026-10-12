@@ -240,19 +240,6 @@ def parse_digest(md):
         repos.append(r)
     repos.sort(key=lambda r: r.rank)
     meta["repos"] = repos
-
-    # Fallback top-list from the summary list if section parse came up empty
-    if not repos:
-        for m in re.finditer(r"^\d+\.\s+\[([^\]]+)\]\(#([^)]+)\)\s*⭐️?\s*([\d.]+)/10\s*[—-]\s*(.*)$", md, re.M):
-            r = Repo()
-            r.rank = len(repos) + 1
-            r.name = m.group(1)
-            r.anchor = m.group(2)
-            r.url = "https://github.com/" + r.name
-            r.score = m.group(3)
-            r.title = m.group(4).strip().rstrip("…").strip()
-            r.what, r.license, r.fit = r.title, "", ""
-            repos.append(r)
     return meta
 
 
@@ -392,9 +379,15 @@ def issue_page(md, week):
     if meta.get("pulse"):
         head.append("<h2>This week&rsquo;s pulse</h2><p>%s</p>" % inline(meta["pulse"]))
 
-    # Replace the digest's own truncated "Featured repos" summary block with
-    # our one-line-per-repo top list, then render the full body after it.
+    # Replace the digest's own truncated "Featured repos" summary block and
+    # every head-extracted element (title, stats, pulse) with our head + top
+    # list, then render the remaining body after it.
     body_md = re.sub(r"\*\*Featured repos\*\*.*?(?=\n---)", "", md, count=1, flags=re.S)
+    body_md = re.sub(r"^# .+\n?", "", body_md, count=1, flags=re.M)
+    if meta.get("stats"):
+        body_md = re.sub(r"^> .+\n?", "", body_md, count=1, flags=re.M)
+    if meta.get("pulse"):
+        body_md = re.sub(r"\*\*This week's pulse:\*\*.*?(?=\n\n|\n---)", "", body_md, count=1, flags=re.S)
     body_html = md_to_html(body_md)
     body = "\n".join(head) + toplist_html(meta) + body_html
     url = "%s/%s.html" % (SITE_URL, week) if week else SITE_URL
