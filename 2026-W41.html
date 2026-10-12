@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf9f7">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#141518">
+<title>2026-W41 — Foreign Repo Radar</title>
+<meta name="description" content="The Chinese-language ecosystem this week skews heavily toward platform-native tooling: scrapers, downloaders, and automation layers built around Bilibili, Douyin, and A-share markets that Western trackers almost never surface. What stands out is how much engineering effort goes into working…">
+<link rel="canonical" href="https://acailic.github.io/repo-radar-digest/2026-W41.html">
+<meta property="og:title" content="2026-W41 — Foreign Repo Radar">
+<meta property="og:description" content="The Chinese-language ecosystem this week skews heavily toward platform-native tooling: scrapers, downloaders, and automation layers built around Bilibili, Douyin, and A-share markets that Western trackers almost never surface. What stands out is how much engineering effort goes into working…">
+<meta property="og:url" content="https://acailic.github.io/repo-radar-digest/2026-W41.html">
+<style>
+:root{--bg:#faf9f7;--fg:#1f2328;--muted:#5f6672;--accent:#8a2f2b;--card:#ffffff;
+--border:#e4e1db;--code:#f3f1ec;--th:#f0eee9;--a:#8a2f2b;--quote:#6b7280}
+@media (prefers-color-scheme: dark){:root{--bg:#141518;--fg:#d6d7da;--muted:#9a9da5;
+--accent:#e2a29e;--card:#1c1e22;--border:#2c2f35;--code:#23262b;--th:#23262b;
+--a:#e2a29e;--quote:#a6a9b1}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif}
+main{max-width:46rem;margin:0 auto;padding:1.2rem 1.1rem 4rem}
+header.site{border-bottom:1px solid var(--border);margin-bottom:2rem;padding-bottom:1rem}
+header.site h1{font-size:1.35rem;margin:0 0 .2rem}
+header.site h1 a{color:inherit;text-decoration:none}
+header.site p{margin:0;color:var(--muted);font-size:.95rem}
+h1,h2,h3,h4{line-height:1.3;font-weight:650}
+h1{font-size:1.7rem;margin:1.6rem 0 .8rem}
+h2{font-size:1.25rem;margin:2.2rem 0 .8rem;padding-top:.6rem;border-top:1px solid var(--border)}
+h3{font-size:1.05rem;margin:1.4rem 0 .5rem}
+a{color:var(--a)}
+hr{border:0;border-top:1px solid var(--border);margin:2rem 0}
+blockquote{margin:1rem 0;padding:.6rem 1rem;border-left:3px solid var(--accent);background:var(--card);border-radius:0 .4rem .4rem 0;color:var(--quote)}
+blockquote p{margin:.2rem 0}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:.92rem}
+th,td{border:1px solid var(--border);padding:.45rem .6rem;text-align:left;vertical-align:top}
+th{background:var(--th)}
+code{background:var(--code);border-radius:.25rem;padding:.08rem .3rem;font-size:.88em;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre{background:var(--code);padding:.8rem;border-radius:.4rem;overflow-x:auto}
+pre code{background:none;padding:0}
+.toplist{list-style:none;margin:1rem 0;padding:0}
+.toplist li{background:var(--card);border:1px solid var(--border);border-radius:.5rem;padding:.7rem .9rem;margin:.5rem 0}
+.toplist .repo{font-weight:650}
+.toplist .facts{color:var(--muted);font-size:.9rem;margin-top:.15rem}
+.badge{display:inline-block;font-size:.78rem;border:1px solid var(--border);border-radius:1rem;padding:.02rem .55rem;margin-left:.35rem;color:var(--muted);white-space:nowrap}
+.score{color:var(--accent);font-weight:650}
+.archive{list-style:none;padding:0}
+.archive li{border:1px solid var(--border);border-radius:.5rem;background:var(--card);padding:.8rem 1rem;margin:.5rem 0}
+.archive a.week{font-weight:650;font-size:1.05rem}
+.meta{color:var(--muted);font-size:.9rem}
+footer.site{border-top:1px solid var(--border);margin-top:3rem;padding-top:1rem;color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+<main>
+<header class="site"><h1><a href="index.html">🌏 Foreign Repo Radar</a></h1><p>Weekly digest of trending CJK GitHub &amp; Gitee repos the West misses — translated, licensed, scored.</p></header>
+<h1>🌏 Foreign Repo Radar — 2026-W41</h1>
+<p class="meta">Week of Oct 5 – Oct 11, 2026 · <a href="2026-W41.html">Permalink</a></p>
+<blockquote><p>Scanned <strong>36</strong> GitHub-trending repos (zh/ja/ko, weekly+daily), kept <strong>11</strong> CJK candidates, featured <strong>10</strong> under-the-radar repos below (15 skipped as too famous, 0 as already noticed by the West). Generated 2026-10-10 21:41 UTC by <code>repo-radar</code>.</p></blockquote>
+<h2>This week&rsquo;s pulse</h2><p>The Chinese-language ecosystem this week skews heavily toward platform-native tooling: scrapers, downloaders, and automation layers built around Bilibili, Douyin, and A-share markets that Western trackers almost never surface. What stands out is how much engineering effort goes into working around closed-platform constraints — danmaku extraction, multi-account check-in bots, gamepad-first clients for consoles — a whole genre of pragmatic hacking that Silicon Valley discourse tends to ignore. The clear pick of the week is LangBot, a genuinely production-grade platform that wires LLMs into virtually every messaging app on the planet, including the Chinese ones (WeChat, DingTalk, Lark, QQ) that Western chatbot frameworks treat as afterthoughts. If you only look at one repo, make it that one.</p><h2 id="top">Top of the week</h2><ol class="toplist"><li><span class="repo"><a href="https://github.com/langbot-app/LangBot" rel="noopener">langbot-app/LangBot</a></span> <span class="badge">#1</span><span class="score">⭐ 8.5/10</span> <br><span class="facts">Production-grade open-source platform for building agentic AI chatbots that connect LLMs to virtually any instant-messaging platform — Discord, Slack, Telegram, LINE, WeChat, WeCom, Lark, DingTalk, QQ, and more —… · license: Apache-2.0 · stack fit: medium</span> <a class="facts" href="#langbot-app-langbot">details ↓</a></li><li><span class="repo"><a href="https://github.com/LorisYounger/VPet" rel="noopener">LorisYounger/VPet</a></span> <span class="badge">#2</span><span class="score">⭐ 5.5/10</span> <br><span class="facts">A virtual desktop pet simulator: an open-source desktop pet (desktop mascot) application for Windows that can also be embedded into any WPF application via a NuGet package. · license: Apache-2.0 · stack fit: low</span> <a class="facts" href="#lorisyounger-vpet">details ↓</a></li><li><span class="repo"><a href="https://github.com/nilaoda/N_m3u8DL-RE" rel="noopener">nilaoda/N_m3u8DL-RE</a></span> <span class="badge">#3</span><span class="score">⭐ 5.5/10</span> <br><span class="facts">A cross-platform, modern and powerful downloader for DASH/HLS/MSS streams supporting both VOD and live capture, with trilingual UI (English/Simplified/Traditional Chinese). · license: MIT · stack fit: low</span> <a class="facts" href="#nilaoda-n-m3u8dl-re">details ↓</a></li><li><span class="repo"><a href="https://github.com/xfangfang/wiliwili" rel="noopener">xfangfang/wiliwili</a></span> <span class="badge">#4</span><span class="score">⭐ 5.5/10</span> <br><span class="facts">A third-party Bilibili client designed for gamepad users, running on all PC platforms plus PSVita, PS4, Xbox, and Nintendo Switch. · license: GPL-3.0 · stack fit: low</span> <a class="facts" href="#xfangfang-wiliwili">details ↓</a></li><li><span class="repo"><a href="https://github.com/Rockyzsu/stock" rel="noopener">Rockyzsu/stock</a></span> <span class="badge">#5</span><span class="score">⭐ 5.0/10</span> <br><span class="facts">A personal quantitative trading toolkit for Chinese A-share markets, framed as 'mastering quant trading in 30 days', covering data scraping, analysis, fund monitoring, ML prediction, and live automated trading via… · license: BSD-3-Clause · stack fit: low</span> <a class="facts" href="#rockyzsu-stock">details ↓</a></li><li><span class="repo"><a href="https://github.com/ScottSloan/Bili23-Downloader" rel="noopener">ScottSloan/Bili23-Downloader</a></span> <span class="badge">#6</span><span class="score">⭐ 4.5/10</span> <br><span class="facts">An open-source, free, cross-platform Bilibili video downloader supporting multi-threaded acceleration, audio/video separation, danmaku metadata extraction, and custom naming/classification. · license: GPL-3.0 · stack fit: low</span> <a class="facts" href="#scottsloan-bili23-downloader">details ↓</a></li><li><span class="repo"><a href="https://github.com/JoeanAmier/TikTokDownloader" rel="noopener">JoeanAmier/TikTokDownloader</a></span> <span class="badge">#7</span><span class="score">⭐ 4.0/10</span> <br><span class="facts">A tool for downloading works (videos/photo posts) and collecting data from Douyin and TikTok, supporting batch downloads, live stream capture, and detailed metadata scraping. · license: GPL-3.0 · stack fit: low</span> <a class="facts" href="#joeanamier-tiktokdownloader">details ↓</a></li><li><span class="repo"><a href="https://github.com/RayWangQvQ/BiliBiliToolPro" rel="noopener">RayWangQvQ/BiliBiliToolPro</a></span> <span class="badge">#8</span><span class="score">⭐ 3.5/10</span> <br><span class="facts">An automation tool for recurring Bilibili tasks (daily check-ins, lotteries, VIP benefits, manga) across multiple accounts, deployable via Docker, Qinglong, Kubernetes, and more, with a web management panel and AI… · license: GPL-3.0 · stack fit: low</span> <a class="facts" href="#raywangqvq-bilibilitoolpro">details ↓</a></li><li><span class="repo"><a href="https://github.com/hanxinhao000/ZeroTermux" rel="noopener">hanxinhao000/ZeroTermux</a></span> <span class="badge">#9</span><span class="score">⭐ 3.0/10</span> <br><span class="facts">ZeroTermux is a non-profit, Chinese-localized fork of Termux (Android terminal emulator) that adds backup/restore, container switching, mirror-source switching, and easy installation of Linux distributions like… · license: NOASSERTION · stack fit: low</span> <a class="facts" href="#hanxinhao000-zerotermux">details ↓</a></li><li><span class="repo"><a href="https://github.com/aoaostar/legado" rel="noopener">aoaostar/legado</a></span> <span class="badge">#10</span><span class="score">⭐ 2.5/10</span> <br><span class="facts">A curated collection of book sources, RSS subscription sources, themes, and typography configs for the 'Legado' (阅读) open-source Android reading app, auto-synced from multiple community sources. · license: none declared · stack fit: low</span> <a class="facts" href="#aoaostar-legado">details ↓</a></li></ol><hr>
+<hr>
+<h2 id="langbot-app-langbot">1. langbot-app/LangBot — Production-grade open-source platform for building agentic AI chatbots that connect LLMs to virtually any…</h2>
+<p><a href="https://github.com/langbot-app/LangBot" rel="noopener">github.com/langbot-app/LangBot</a> · ⭐ 18,091 total (+30 today) · Language: Python · Spoken: zh</p>
+<blockquote><p><strong>What it is:</strong> Production-grade open-source platform for building agentic AI chatbots that connect LLMs to virtually any instant-messaging platform — Discord, Slack, Telegram, LINE, WeChat, WeCom, Lark, DingTalk, QQ, and more — with RAG, plugin marketplace, and MCP support.</p></blockquote>
+<p><strong>README highlights (translated):</strong></p>
+<ul>
+<li>One codebase targeting 15+ IM platforms including WeChat/WeCom/DingTalk/Lark and Western ones like Slack, Discord, Telegram, LINE</li>
+<li>Agent capabilities: multi-turn dialogue, tool calling, multimodal, streaming output, built-in RAG with Dify, Coze, n8n, Langflow integrations</li>
+<li>Production features: access control, rate limiting, sensitive-word filtering, monitoring, multi-pipeline architecture</li>
+<li>Plugin ecosystem with hundreds of plugins and MCP protocol support</li>
+<li>Web management dashboard — no YAML editing; one-line launch via 'uvx langbot' or Docker Compose</li>
+<li>18k stars, Apache-2.0, official cloud offering at cloud.langbot.app</li>
+</ul>
+<p><strong>Radar scorecard</strong></p>
+<table><thead><tr><th>Dimension</th><th>Assessment</th></tr></thead><tbody><tr><td>License</td><td>Apache-2.0 — permissive ✅</td></tr><tr><td>Western equivalent</td><td>Typebot / Botpress (with some overlap with n8n bridge-style projects)</td></tr><tr><td>Monetization angle</td><td>Monetize via a hosted multi-IM bot platform for enterprises (especially insurtech customer service on WeChat/WhatsApp/Telegram), plus paid plugin marketplace and enterprise support contracts.</td></tr><tr><td>Stack fit (captain)</td><td><strong>medium</strong> — Directly relevant to AI agents and automation, and could power insurance customer-service bots, though the Python stack diverges from the reader's Java/Spring background.</td></tr><tr><td>Western attention</td><td><strong>underground</strong> — English issues 17%, no notable HN story</td></tr><tr><td>Radar score</td><td>⭐️ <strong>8.5/10</strong> — Massive 18k-star project with unique East-Asian IM coverage, agent/RAG depth, and plugin economy that remains largely invisible to Western HN audiences despite an English README.</td></tr></tbody></table>
+<p>Topics: <code>agent</code>, <code>coze</code>, <code>deepseek</code>, <code>dify</code>, <code>dingtalk</code>, <code>discord</code>, <code>feishu</code>, <code>kook</code>, <code>langbot</code>, <code>lark</code></p>
+<hr>
+<h2 id="lorisyounger-vpet">2. LorisYounger/VPet — A virtual desktop pet simulator: an open-source desktop pet (desktop mascot) application for Windows that can…</h2>
+<p><a href="https://github.com/LorisYounger/VPet" rel="noopener">github.com/LorisYounger/VPet</a> · ⭐ 6,943 total (+78 this week) · Language: C# · Spoken: zh</p>
+<blockquote><p><strong>What it is:</strong> A virtual desktop pet simulator: an open-source desktop pet (desktop mascot) application for Windows that can also be embedded into any WPF application via a NuGet package.</p></blockquote>
+<p><strong>README highlights (translated):</strong></p>
+<ul>
+<li>Free open-source desktop pet with 32 pet types x 4 states x 3 animation types, including interactions like head-patting, lifting, and wall-climbing</li>
+<li>Distributed free on Steam and as a NuGet library (VPet-Simulator.Core) for embedding in WPF apps</li>
+<li>Full Steam Workshop/mod support: custom animations, food/items, jobs, speech text, themes, and code plugins (e.g. Live2D/Spine, alarms, notepads)</li>
+<li>Spin-off of the commercial 'Virtual Streamer Simulator'; acts as its marketing funnel</li>
+<li>~7k stars with steady weekly growth; active contributor and translation community</li>
+</ul>
+<p><strong>Radar scorecard</strong></p>
+<table><thead><tr><th>Dimension</th><th>Assessment</th></tr></thead><tbody><tr><td>License</td><td>Apache-2.0 — permissive ✅</td></tr><tr><td>Western equivalent</td><td>Shimeji (desktop mascot) / Desktop Goose, but far more extensible</td></tr><tr><td>Monetization angle</td><td>Monetize via a paid marketplace of premium pet characters/animations, branded corporate mascots (e.g. insurer avatar assistants embedded in customer-facing Windows apps), or enterprise customization services.</td></tr><tr><td>Stack fit (captain)</td><td><strong>low</strong> — It's a C#/WPF desktop novelty app with no overlap with the reader's Java/Spring, data pipeline, or AI-agent stack.</td></tr><tr><td>Western attention</td><td><strong>underground</strong> — English issues 31%, no notable HN story</td></tr><tr><td>Radar score</td><td>⭐️ <strong>5.5/10</strong> — Genuinely novel and popular in the West's blind spot, but desktop pet software has little relevance to the reader's professional interests.</td></tr></tbody></table>
+<p>Topics: <code>desktop-pet</code>, <code>wpf</code></p>
+<hr>
+<h2 id="nilaoda-n-m3u8dl-re">3. nilaoda/N_m3u8DL-RE — A cross-platform, modern and powerful downloader for DASH/HLS/MSS streams supporting both VOD and live…</h2>
+<p><a href="https://github.com/nilaoda/N_m3u8DL-RE" rel="noopener">github.com/nilaoda/N_m3u8DL-RE</a> · ⭐ 8,885 total (+50 this week) · Language: C# · Spoken: zh</p>
+<blockquote><p><strong>What it is:</strong> A cross-platform, modern and powerful downloader for DASH/HLS/MSS streams supporting both VOD and live capture, with trilingual UI (English/Simplified/Traditional Chinese).</p></blockquote>
+<p><strong>README highlights (translated):</strong></p>
+<ul>
+<li>Downloads MPD/M3U8/ISM streams with multi-threaded segment fetching (default 10 threads) and per-segment retry logic</li>
+<li>Supports live stream recording with automatic timeout adjustment and network-failure recovery waiting</li>
+<li>Cookie support via Netscape-format files for authenticated streams, applied to manifests, keys, init files and segments</li>
+<li>Rich config file system (CLI &gt; config &gt; defaults) with XDG/APPDATA paths and Docker-friendly mounting</li>
+<li>Built-in tool commands: concat (no FFmpeg needed), merge, mux (video/audio/subtitle with track language/titles and subtitle timing fixes), and a doctor diagnostics command</li>
+<li>Available via AUR, PowerShell tab-completion, and auto-generated builds; MIT licensed with ~8.9k stars</li>
+</ul>
+<p><strong>Radar scorecard</strong></p>
+<table><thead><tr><th>Dimension</th><th>Assessment</th></tr></thead><tbody><tr><td>License</td><td>MIT — permissive ✅</td></tr><tr><td>Western equivalent</td><td>yt-dlp (partially; streamlink for live)</td></tr><tr><td>Monetization angle</td><td>Realistic angle is thin given yt-dlp's dominance, but the muxing/concat tooling could be packaged as a paid GUI or commercial media-archival appliance for compliance/insurance evidence capture.</td></tr><tr><td>Stack fit (captain)</td><td><strong>low</strong> — A media stream downloader in C# has little overlap with the reader's Java/Spring, AI-agent, and data-pipeline stack.</td></tr><tr><td>Western attention</td><td><strong>underground</strong> — English issues 75%, no notable HN story</td></tr><tr><td>Radar score</td><td>⭐️ <strong>5.5/10</strong> — Solid, mature tool with real traction, but it's a well-known category with strong Western incumbents (yt-dlp) and poor fit to the reader's stack.</td></tr></tbody></table>
+<p>Topics: <code>dash</code>, <code>ffmpeg</code>, <code>hls</code>, <code>ism</code>, <code>live</code>, <code>m3u8</code>, <code>m3u8-downloader</code>, <code>mpd</code>, <code>recorder</code></p>
+<hr>
+<h2 id="xfangfang-wiliwili">4. xfangfang/wiliwili — A third-party Bilibili client designed for gamepad users, running on all PC platforms plus PSVita, PS4, Xbox…</h2>
+<p><a href="https://github.com/xfangfang/wiliwili" rel="noopener">github.com/xfangfang/wiliwili</a> · ⭐ 5,541 total (+26 this week) · Language: C++ · Spoken: zh</p>
+<blockquote><p><strong>What it is:</strong> A third-party Bilibili client designed for gamepad users, running on all PC platforms plus PSVita, PS4, Xbox, and Nintendo Switch.</p></blockquote>
+<p><strong>README highlights (translated):</strong></p>
+<ul>
+<li>Cross-platform Bilibili client with a near-official experience, controllable via touchscreen, mouse, keyboard, and gamepad</li>
+<li>Runs on Switch, PSVita, PS4, Windows, macOS, and Linux including Steam Deck; distributed via Flathub, Scoop, AUR, and Fedora COPR</li>
+<li>Full features: danmaku/comments, live streams, search, dynamics feed, QR login, history, collections, light/dark themes, multi-language (zh/ja/ko/en)</li>
+<li>Custom options include Anime4K upscaling, custom fonts/icons, and custom layout themes</li>
+<li>Built on nanovg UI (OpenGL/Vulkan/Metal) with FFmpeg + MPV playback; deko3d build plays 4K@60 on Switch</li>
+</ul>
+<p><strong>Radar scorecard</strong></p>
+<table><thead><tr><th>Dimension</th><th>Assessment</th></tr></thead><tbody><tr><td>License</td><td>GPL-3.0 — copyleft ⚠️ flagged</td></tr><tr><td>Western equivalent</td><td>none found</td></tr><tr><td>Monetization angle</td><td>No realistic direct monetization since it's a GPL-3.0 third-party client for Bilibili's API, but the portable nanovg+MPV game-console UI framework underneath could be productized as a paid embedded/kiosk media-UI toolkit.</td></tr><tr><td>Stack fit (captain)</td><td><strong>low</strong> — A C++ console media client has no overlap with the reader's Java/Spring, insurtech, or data-pipeline stack; interest is limited to the porting architecture.</td></tr><tr><td>Western attention</td><td><strong>underground</strong> — English issues 6%, no notable HN story</td></tr><tr><td>Radar score</td><td>⭐️ <strong>5.5/10</strong> — Technically impressive and genuinely underground in the West (running Bilibili on a PSVita/Switch), but it's region-locked to a Chinese platform and irrelevant to the reader's stack.</td></tr></tbody></table>
+<p>Topics: <code>bilibili</code>, <code>mpv</code>, <code>nanovg</code>, <code>nintendo-switch</code>, <code>nintendo-switch-homebrew</code>, <code>opencc</code>, <code>opengl</code>, <code>ps4</code>, <code>psv</code>, <code>xbox</code></p>
+<hr>
+<h2 id="rockyzsu-stock">5. Rockyzsu/stock — A personal quantitative trading toolkit for Chinese A-share markets, framed as 'mastering quant trading in 30…</h2>
+<p><a href="https://github.com/Rockyzsu/stock" rel="noopener">github.com/Rockyzsu/stock</a> · ⭐ 8,765 total (+118 this week) · Language: Python · Spoken: zh</p>
+<blockquote><p><strong>What it is:</strong> A personal quantitative trading toolkit for Chinese A-share markets, framed as 'mastering quant trading in 30 days', covering data scraping, analysis, fund monitoring, ML prediction, and live automated trading via broker APIs.</p></blockquote>
+<p><strong>README highlights (translated):</strong></p>
+<ul>
+<li>Large collection of Python modules: data collection (datahub), stock/fund analysis, K-line pattern recognition via TA-Lib, and machine-learning price prediction</li>
+<li>Live automated trading via ptrade with broker API access (A-shares, convertible bonds, ETFs/LOFs) at low commission rates (0.01% stocks, 0.04% bonds)</li>
+<li>Extensive China-specific data tooling: jisilu convertible bond feeds, Xueqiu/Danjuan fund data, IPO pace analysis, limit-up monitoring, blacklist stock screening</li>
+<li>Stack uses MySQL/MongoDB/ElasticSearch with a JSON-based config system for switching local/cloud environments</li>
+<li>8.7k stars with active week-over-week growth; monetized via broker referral sign-ups and a WeChat public account</li>
+<li>Actively refactoring (Dec 2022) with ongoing strategy updates and community engagement via WeChat</li>
+</ul>
+<p><strong>Radar scorecard</strong></p>
+<table><thead><tr><th>Dimension</th><th>Assessment</th></tr></thead><tbody><tr><td>License</td><td>BSD-3-Clause — permissive ✅</td></tr><tr><td>Western equivalent</td><td>zipline / QuantConnect / backtrader</td></tr><tr><td>Monetization angle</td><td>The author already monetizes via broker referral commissions and could expand into a paid Chinese-market data/strategy subscription or a hosted signals service for CN-equities traders, though the brokerage-affiliate model does not translate to Western markets directly.</td></tr><tr><td>Stack fit (captain)</td><td><strong>low</strong> — It's a Python China-broker-specific trading script collection with little overlap with the reader's Java/Spring, AI-agent, or insurance-data pipeline work.</td></tr><tr><td>Western attention</td><td><strong>underground</strong> — English issues 16%, no notable HN story</td></tr><tr><td>Radar score</td><td>⭐️ <strong>5.0/10</strong> — Genuinely underground with strong traction and China-market data-scraper content the West lacks, but it's a sprawling personal script repo rather than a reusable framework and scores are capped by low stack relevance.</td></tr></tbody></table>
+<p>Topics: <code>python</code>, <code>quant</code>, <code>stock</code></p>
+<hr>
+<h2 id="scottsloan-bili23-downloader">6. ScottSloan/Bili23-Downloader — An open-source, free, cross-platform Bilibili video downloader supporting multi-threaded acceleration…</h2>
+<p><a href="https://github.com/ScottSloan/Bili23-Downloader" rel="noopener">github.com/ScottSloan/Bili23-Downloader</a> · ⭐ 8,247 total (+297 this week) · Language: Python · Spoken: zh</p>
+<blockquote><p><strong>What it is:</strong> An open-source, free, cross-platform Bilibili video downloader supporting multi-threaded acceleration, audio/video separation, danmaku metadata extraction, and custom naming/classification.</p></blockquote>
+<p><strong>README highlights (translated):</strong></p>
+<ul>
+<li>Cross-platform desktop app (Windows incl. Win7, Linux, macOS) with modern Fluent Design UI, light/dark themes</li>
+<li>Multi-threaded parallel downloads with resume, auto-retry, rate limiting, and CDN node selection</li>
+<li>Parses nearly every Bilibili content type: regular uploads, anime, movies, courses, interactive videos, music, user spaces, favorites, watch history, batch links</li>
+<li>Supports up to 8K/HDR/Dolby Vision video, Hi-Res/Dolby Atmos audio, danmaku and subtitle export (xml/ass/srt etc.), cover embedding, NFO metadata for Kodi/Jellyfin/Emby</li>
+<li>Powerful rule engine for naming templates and multi-level directory organization; duplicate download detection; clipboard monitoring; QR/SMS/Cookie login</li>
+<li>GPL-3.0, fully open source, no ads or in-app purchases; 8.2k stars and +297 this week, solo-maintained</li>
+</ul>
+<p><strong>Radar scorecard</strong></p>
+<table><thead><tr><th>Dimension</th><th>Assessment</th></tr></thead><tbody><tr><td>License</td><td>GPL-3.0 — copyleft ⚠️ flagged</td></tr><tr><td>Western equivalent</td><td>yt-dlp (with a GUI like Stacher or Parabolic)</td></tr><tr><td>Monetization angle</td><td>No realistic commercial angle since it targets a Chinese platform and explicitly forbids commercial use, though the naming/metadata rule engine and Jellyfin/Emby NFO pipeline ideas could inspire a paid personal-media-archiver product for Western streaming services.</td></tr><tr><td>Stack fit (captain)</td><td><strong>low</strong> — It's a Python GUI scraper for Bilibili, far from the reader's Java/Spring, AI-agent, and data-pipeline focus.</td></tr><tr><td>Western attention</td><td><strong>underground</strong> — English issues 14%, no notable HN story</td></tr><tr><td>Radar score</td><td>⭐️ <strong>4.5/10</strong> — Solid traction and engineering quality, but it's a China-platform-specific downloader the West already covers conceptually with yt-dlp GUIs, with low reader stack relevance.</td></tr></tbody></table>
+<p>Topics: <code>bili23</code>, <code>bilibili</code>, <code>bilibili-downloader</code>, <code>downloader</code>, <code>gui</code>, <code>linux</code>, <code>macos</code>, <code>pyside6</code>, <code>python</code>, <code>windows</code></p>
+<hr>
+<h2 id="joeanamier-tiktokdownloader">7. JoeanAmier/TikTokDownloader — A tool for downloading works (videos/photo posts) and collecting data from Douyin and TikTok, supporting…</h2>
+<p><a href="https://github.com/JoeanAmier/TikTokDownloader" rel="noopener">github.com/JoeanAmier/TikTokDownloader</a> · ⭐ 16,661 total (+45 today) · Language: JavaScript · Spoken: zh</p>
+<blockquote><p><strong>What it is:</strong> A tool for downloading works (videos/photo posts) and collecting data from Douyin and TikTok, supporting batch downloads, live stream capture, and detailed metadata scraping.</p></blockquote>
+<p><strong>README highlights (translated):</strong></p>
+<ul>
+<li>Downloads Douyin/TikTok videos, photo sets, live photos, and highest-quality source files</li>
+<li>Batch downloads by account (posts/likes/favorites/collections) with incremental sync and dedup</li>
+<li>Scrapes detailed data with persistence to CSV/XLSX/SQLite, including comments, search results, and trending charts</li>
+<li>Live stream URL extraction and ffmpeg-based live recording; Web API mode with auto-generated docs (port 5555)</li>
+<li>16.6k stars, Docker images, prebuilt binaries for Windows/macOS; Web UI planned in upcoming 6.0 rewrite</li>
+<li>Encryption-parameter algorithms no longer maintained for compliance — users must supply their own signature generation code</li>
+</ul>
+<p><strong>Radar scorecard</strong></p>
+<table><thead><tr><th>Dimension</th><th>Assessment</th></tr></thead><tbody><tr><td>License</td><td>GPL-3.0 — copyleft ⚠️ flagged</td></tr><tr><td>Western equivalent</td><td>yt-dlp (with TikTok extractor support) / cobalt.tools</td></tr><tr><td>Monetization angle</td><td>No realistic clean monetization angle — the tool scrapes TikTok/Douyin in violation of their ToS and the maintainer already dropped the signature code for legal reasons, making a hosted service or commercial support legally risky.</td></tr><tr><td>Stack fit (captain)</td><td><strong>low</strong> — A social-media scraper in Python/JS has essentially no overlap with the reader's AI-agent, Java/Spring, insurtech, or data-pipeline stack.</td></tr><tr><td>Western attention</td><td><strong>underground</strong> — English issues 0%, no notable HN story</td></tr><tr><td>Radar score</td><td>⭐️ <strong>4.0/10</strong> — Very popular and genuinely underground in the West, but it's a scraping tool with legal fragility, Western alternatives exist (yt-dlp, cobalt), and zero relevance to the reader's stack.</td></tr></tbody></table>
+<p>Topics: <code>api</code>, <code>csv</code>, <code>docker</code>, <code>douyin</code>, <code>downloader</code>, <code>ffmpeg</code>, <code>httpx</code>, <code>linux</code>, <code>macos</code>, <code>pyinstaller</code></p>
+<hr>
+<h2 id="raywangqvq-bilibilitoolpro">8. RayWangQvQ/BiliBiliToolPro — An automation tool for recurring Bilibili tasks (daily check-ins, lotteries, VIP benefits, manga) across…</h2>
+<p><a href="https://github.com/RayWangQvQ/BiliBiliToolPro" rel="noopener">github.com/RayWangQvQ/BiliBiliToolPro</a> · ⭐ 8,973 total (+50 this week) · Language: C# · Spoken: zh</p>
+<blockquote><p><strong>What it is:</strong> An automation tool for recurring Bilibili tasks (daily check-ins, lotteries, VIP benefits, manga) across multiple accounts, deployable via Docker, Qinglong, Kubernetes, and more, with a web management panel and AI integrations.</p></blockquote>
+<p><strong>README highlights (translated):</strong></p>
+<ul>
+<li>Automates daily experience tasks, live-room lotteries, fan medals, manga check-ins, VIP benefits, silver-to-coin exchange, and batch unfollowing</li>
+<li>Web panel for managing accounts, schedules, configs, and execution logs; console host also supported</li>
+<li>QR-code login with automatic cookie refresh; supports multiple Bilibili accounts</li>
+<li>Deploys via Docker, Podman, Helm/K8s, Qinglong, Tencent SCF, Krew, or local machine</li>
+<li>Per-activity configuration toggles and notification support</li>
+<li>Nearly 9k stars; learning/testing tool with warnings to respect Bilibili ToS</li>
+</ul>
+<p><strong>Radar scorecard</strong></p>
+<table><thead><tr><th>Dimension</th><th>Assessment</th></tr></thead><tbody><tr><td>License</td><td>GPL-3.0 — copyleft ⚠️ flagged</td></tr><tr><td>Western equivalent</td><td>none found</td></tr><tr><td>Monetization angle</td><td>No realistic direct monetization since it exists to farm rewards on one Chinese platform and violates Bilibili ToS if commercialized, but the multi-account web-panel task-scheduler architecture could be productized as a general social-account automation SaaS.</td></tr><tr><td>Stack fit (captain)</td><td><strong>low</strong> — It's a C# reward-farming bot for a Chinese video platform with little overlap with the reader's AI-agent, Java/Spring, insurtech, or ETL work.</td></tr><tr><td>Western attention</td><td><strong>crossing_over</strong> — English issues 0%, no notable HN story</td></tr><tr><td>Radar score</td><td>⭐️ <strong>3.5/10</strong> — Real traction and English README but it's a platform-specific ToS-gray automation script with no Western portability and near-zero stack relevance.</td></tr></tbody></table>
+<p>Topics: <code>bilibili</code>, <code>blazor</code>, <code>netcore</code>, <code>quartz-net</code>, <code>serilog</code></p>
+<hr>
+<h2 id="hanxinhao000-zerotermux">9. hanxinhao000/ZeroTermux — ZeroTermux is a non-profit, Chinese-localized fork of Termux (Android terminal emulator) that adds…</h2>
+<p><a href="https://github.com/hanxinhao000/ZeroTermux" rel="noopener">github.com/hanxinhao000/ZeroTermux</a> · ⭐ 3,047 total (+24 this week) · Language: Java · Spoken: zh</p>
+<blockquote><p><strong>What it is:</strong> ZeroTermux is a non-profit, Chinese-localized fork of Termux (Android terminal emulator) that adds backup/restore, container switching, mirror-source switching, and easy installation of Linux distributions like Ubuntu and Kali.</p></blockquote>
+<p><strong>README highlights (translated):</strong></p>
+<ul>
+<li>Termux fork with built-in backup and recovery, container switching, and package-mirror switching (defaults to Tsinghua/Beijing mirrors for mainland China users)</li>
+<li>One-tap installation of Linux distributions (Ubuntu, Kali, etc.) via internal X11 aar channel</li>
+<li>Pre-compiled APKs available from the author's own download server; ~3k stars</li>
+<li>Explicitly non-commercial: GPL-licensed, learning and communication only, users bear all risk</li>
+<li>Bundles many third-party components: ttyd, filebrowser, AgentWeb, swiftp (FTP server), code editor</li>
+<li>Recommends users graduate to official Termux after getting started</li>
+</ul>
+<p><strong>Radar scorecard</strong></p>
+<table><thead><tr><th>Dimension</th><th>Assessment</th></tr></thead><tbody><tr><td>License</td><td>NOASSERTION — unknown/unclassified</td></tr><tr><td>Western equivalent</td><td>Termux (it is a fork; Termux:Ubuntu/Userland for distro installs)</td></tr><tr><td>Monetization angle</td><td>No realistic angle: the project explicitly prohibits commercial use, and the West already has official Termux plus UserLAnd — at most, ideas like its integrated backup/restore and container-switch UX could inspire a paid Android dev-environment app.</td></tr><tr><td>Stack fit (captain)</td><td><strong>low</strong> — An Android terminal fork has little overlap with the reader's AI agents, Java/Spring, insurtech, and data-pipeline interests beyond mild curiosity about the embedded Linux tooling.</td></tr><tr><td>Western attention</td><td><strong>underground</strong> — English issues 42%, no notable HN story</td></tr><tr><td>Radar score</td><td>⭐️ <strong>3.0/10</strong> — Underground with modest traction, but it's a regional Termux fork with China-specific mirror features the West already covers via official Termux and UserLAnd.</td></tr></tbody></table>
+<hr>
+<h2 id="aoaostar-legado">10. aoaostar/legado — A curated collection of book sources, RSS subscription sources, themes, and typography configs for the…</h2>
+<p><a href="https://github.com/aoaostar/legado" rel="noopener">github.com/aoaostar/legado</a> · ⭐ 6,764 total (+188 this week) · Language: HTML · Spoken: zh</p>
+<blockquote><p><strong>What it is:</strong> A curated collection of book sources, RSS subscription sources, themes, and typography configs for the 'Legado' (阅读) open-source Android reading app, auto-synced from multiple community sources.</p></blockquote>
+<p><strong>README highlights (translated):</strong></p>
+<ul>
+<li>Aggregates thousands of Legado book sources (e.g., a 3,907-entry master list, 2,117-entry and 1,554-entry Coolapk-sourced lists) with one-tap import URLs</li>
+<li>Also distributes RSS subscription sources, ad-purification rules, reading layout configs (e.g., Tomato Novel), and day/night themes styled after WeRead and HouMo</li>
+<li>Auto-syncs upstream repos (XIU2, shidahuilang, pobing, etc.) on a schedule; some upstream syncs intermittently fail</li>
+<li>Git repo doesn't support one-click import; users are directed to the companion site legado.aoaostar.com</li>
+</ul>
+<p><strong>Radar scorecard</strong></p>
+<table><thead><tr><th>Dimension</th><th>Assessment</th></tr></thead><tbody><tr><td>License</td><td>none declared — 🔴 no license — red flag</td></tr><tr><td>Western equivalent</td><td>Calibre recipe plugins / Readest-style reader config communities</td></tr><tr><td>Monetization angle</td><td>No realistic direct monetization since it mirrors freely shared community configs; at most a donation or ad-supported import-portal site.</td></tr><tr><td>Stack fit (captain)</td><td><strong>low</strong> — It's a config/aggregation repo for an Android novel reader, with no overlap with the reader's Java backend, AI-agent, or data-pipeline work.</td></tr><tr><td>Western attention</td><td><strong>underground</strong> — English issues 17%, no notable HN story</td></tr><tr><td>Radar score</td><td>⭐️ <strong>2.5/10</strong> — A curated mirror of scrapers/configs for a Chinese reading app — little engineering novelty, legally grey scraping content, and near-zero relevance to the reader's stack.</td></tr></tbody></table>
+<p>Topics: <code>legado</code>, <code>legado3</code></p>
+<hr>
+<p>*Foreign Repo Radar is built on <a href="https://github.com/Thysrael/Horizon" rel="noopener">Thysrael/Horizon</a> (MIT). Scores are LLM-assisted editorial judgment, not investment advice.*</p>
+<footer class="site">Digest by the private <a href="https://github.com/Thysrael/Horizon" rel="noopener">repo-radar</a> (built on Thysrael/Horizon, MIT). Scores are LLM-assisted editorial judgment, not investment advice. Facts are public repo data; commentary and translations are original.</footer>
+</main>
+</body>
+</html>

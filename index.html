@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf9f7">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#141518">
+<title>Foreign Repo Radar</title>
+<meta name="description" content="Weekly digest of trending CJK GitHub &amp; Gitee repos the West misses — translated, licensed, scored.">
+<link rel="canonical" href="https://acailic.github.io/repo-radar-digest">
+<meta property="og:title" content="Foreign Repo Radar">
+<meta property="og:description" content="Weekly digest of trending CJK GitHub &amp; Gitee repos the West misses — translated, licensed, scored.">
+<meta property="og:url" content="https://acailic.github.io/repo-radar-digest">
+<style>
+:root{--bg:#faf9f7;--fg:#1f2328;--muted:#5f6672;--accent:#8a2f2b;--card:#ffffff;
+--border:#e4e1db;--code:#f3f1ec;--th:#f0eee9;--a:#8a2f2b;--quote:#6b7280}
+@media (prefers-color-scheme: dark){:root{--bg:#141518;--fg:#d6d7da;--muted:#9a9da5;
+--accent:#e2a29e;--card:#1c1e22;--border:#2c2f35;--code:#23262b;--th:#23262b;
+--a:#e2a29e;--quote:#a6a9b1}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif}
+main{max-width:46rem;margin:0 auto;padding:1.2rem 1.1rem 4rem}
+header.site{border-bottom:1px solid var(--border);margin-bottom:2rem;padding-bottom:1rem}
+header.site h1{font-size:1.35rem;margin:0 0 .2rem}
+header.site h1 a{color:inherit;text-decoration:none}
+header.site p{margin:0;color:var(--muted);font-size:.95rem}
+h1,h2,h3,h4{line-height:1.3;font-weight:650}
+h1{font-size:1.7rem;margin:1.6rem 0 .8rem}
+h2{font-size:1.25rem;margin:2.2rem 0 .8rem;padding-top:.6rem;border-top:1px solid var(--border)}
+h3{font-size:1.05rem;margin:1.4rem 0 .5rem}
+a{color:var(--a)}
+hr{border:0;border-top:1px solid var(--border);margin:2rem 0}
+blockquote{margin:1rem 0;padding:.6rem 1rem;border-left:3px solid var(--accent);background:var(--card);border-radius:0 .4rem .4rem 0;color:var(--quote)}
+blockquote p{margin:.2rem 0}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:.92rem}
+th,td{border:1px solid var(--border);padding:.45rem .6rem;text-align:left;vertical-align:top}
+th{background:var(--th)}
+code{background:var(--code);border-radius:.25rem;padding:.08rem .3rem;font-size:.88em;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre{background:var(--code);padding:.8rem;border-radius:.4rem;overflow-x:auto}
+pre code{background:none;padding:0}
+.toplist{list-style:none;margin:1rem 0;padding:0}
+.toplist li{background:var(--card);border:1px solid var(--border);border-radius:.5rem;padding:.7rem .9rem;margin:.5rem 0}
+.toplist .repo{font-weight:650}
+.toplist .facts{color:var(--muted);font-size:.9rem;margin-top:.15rem}
+.badge{display:inline-block;font-size:.78rem;border:1px solid var(--border);border-radius:1rem;padding:.02rem .55rem;margin-left:.35rem;color:var(--muted);white-space:nowrap}
+.score{color:var(--accent);font-weight:650}
+.archive{list-style:none;padding:0}
+.archive li{border:1px solid var(--border);border-radius:.5rem;background:var(--card);padding:.8rem 1rem;margin:.5rem 0}
+.archive a.week{font-weight:650;font-size:1.05rem}
+.meta{color:var(--muted);font-size:.9rem}
+footer.site{border-top:1px solid var(--border);margin-top:3rem;padding-top:1rem;color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+<main>
+<header class="site"><h1><a href="index.html">🌏 Foreign Repo Radar</a></h1><p>Weekly digest of trending CJK GitHub &amp; Gitee repos the West misses — translated, licensed, scored.</p></header>
+<h1>The weekly digest of repos the West misses</h1>
+<p>Trending Chinese/Japanese/Korean GitHub &amp; Gitee repositories, translated and scored: what it is, why it matters, license, stack fit. Fresh every week; read the <a href="2026-W41.html">latest issue</a>.</p>
+<h2>Latest — <a href="2026-W41.html">2026-W41</a> <span class="meta">(Oct 5 – Oct 11, 2026)</span></h2>
+<p>The Chinese-language ecosystem this week skews heavily toward platform-native tooling: scrapers, downloaders, and automation layers built around Bilibili, Douyin, and A-share markets that Western trackers almost never surface. What stands out is how much engineering effort goes into working around closed-platform constraints — danmaku extraction, multi-account check-in bots, gamepad-first clients for consoles — a whole genre of pragmatic hacking that Silicon Valley discourse tends to ignore. The clear pick of the week is LangBot, a genuinely production-grade platform that wires LLMs into virtually every messaging app on the planet, including the Chinese ones (WeChat, DingTalk, Lark, QQ) that Western chatbot frameworks treat as afterthoughts. If you only look at one repo, make it that one.</p>
+<h2 id="latest-top">Top of the week</h2><ol class="toplist"><li><span class="repo"><a href="https://github.com/langbot-app/LangBot" rel="noopener">langbot-app/LangBot</a></span> <span class="badge">#1</span><span class="score">⭐ 8.5/10</span> <br><span class="facts">Production-grade open-source platform for building agentic AI chatbots that connect LLMs to virtually any instant-messaging platform — Discord, Slack, Telegram, LINE, WeChat, WeCom, Lark, DingTalk, QQ, and more —… · license: Apache-2.0 · stack fit: medium</span> <a class="facts" href="2026-W41.html#langbot-app-langbot">details ↓</a></li><li><span class="repo"><a href="https://github.com/LorisYounger/VPet" rel="noopener">LorisYounger/VPet</a></span> <span class="badge">#2</span><span class="score">⭐ 5.5/10</span> <br><span class="facts">A virtual desktop pet simulator: an open-source desktop pet (desktop mascot) application for Windows that can also be embedded into any WPF application via a NuGet package. · license: Apache-2.0 · stack fit: low</span> <a class="facts" href="2026-W41.html#lorisyounger-vpet">details ↓</a></li><li><span class="repo"><a href="https://github.com/nilaoda/N_m3u8DL-RE" rel="noopener">nilaoda/N_m3u8DL-RE</a></span> <span class="badge">#3</span><span class="score">⭐ 5.5/10</span> <br><span class="facts">A cross-platform, modern and powerful downloader for DASH/HLS/MSS streams supporting both VOD and live capture, with trilingual UI (English/Simplified/Traditional Chinese). · license: MIT · stack fit: low</span> <a class="facts" href="2026-W41.html#nilaoda-n-m3u8dl-re">details ↓</a></li><li><span class="repo"><a href="https://github.com/xfangfang/wiliwili" rel="noopener">xfangfang/wiliwili</a></span> <span class="badge">#4</span><span class="score">⭐ 5.5/10</span> <br><span class="facts">A third-party Bilibili client designed for gamepad users, running on all PC platforms plus PSVita, PS4, Xbox, and Nintendo Switch. · license: GPL-3.0 · stack fit: low</span> <a class="facts" href="2026-W41.html#xfangfang-wiliwili">details ↓</a></li><li><span class="repo"><a href="https://github.com/Rockyzsu/stock" rel="noopener">Rockyzsu/stock</a></span> <span class="badge">#5</span><span class="score">⭐ 5.0/10</span> <br><span class="facts">A personal quantitative trading toolkit for Chinese A-share markets, framed as 'mastering quant trading in 30 days', covering data scraping, analysis, fund monitoring, ML prediction, and live automated trading via… · license: BSD-3-Clause · stack fit: low</span> <a class="facts" href="2026-W41.html#rockyzsu-stock">details ↓</a></li><li><span class="repo"><a href="https://github.com/ScottSloan/Bili23-Downloader" rel="noopener">ScottSloan/Bili23-Downloader</a></span> <span class="badge">#6</span><span class="score">⭐ 4.5/10</span> <br><span class="facts">An open-source, free, cross-platform Bilibili video downloader supporting multi-threaded acceleration, audio/video separation, danmaku metadata extraction, and custom naming/classification. · license: GPL-3.0 · stack fit: low</span> <a class="facts" href="2026-W41.html#scottsloan-bili23-downloader">details ↓</a></li><li><span class="repo"><a href="https://github.com/JoeanAmier/TikTokDownloader" rel="noopener">JoeanAmier/TikTokDownloader</a></span> <span class="badge">#7</span><span class="score">⭐ 4.0/10</span> <br><span class="facts">A tool for downloading works (videos/photo posts) and collecting data from Douyin and TikTok, supporting batch downloads, live stream capture, and detailed metadata scraping. · license: GPL-3.0 · stack fit: low</span> <a class="facts" href="2026-W41.html#joeanamier-tiktokdownloader">details ↓</a></li><li><span class="repo"><a href="https://github.com/RayWangQvQ/BiliBiliToolPro" rel="noopener">RayWangQvQ/BiliBiliToolPro</a></span> <span class="badge">#8</span><span class="score">⭐ 3.5/10</span> <br><span class="facts">An automation tool for recurring Bilibili tasks (daily check-ins, lotteries, VIP benefits, manga) across multiple accounts, deployable via Docker, Qinglong, Kubernetes, and more, with a web management panel and AI… · license: GPL-3.0 · stack fit: low</span> <a class="facts" href="2026-W41.html#raywangqvq-bilibilitoolpro">details ↓</a></li><li><span class="repo"><a href="https://github.com/hanxinhao000/ZeroTermux" rel="noopener">hanxinhao000/ZeroTermux</a></span> <span class="badge">#9</span><span class="score">⭐ 3.0/10</span> <br><span class="facts">ZeroTermux is a non-profit, Chinese-localized fork of Termux (Android terminal emulator) that adds backup/restore, container switching, mirror-source switching, and easy installation of Linux distributions like… · license: NOASSERTION · stack fit: low</span> <a class="facts" href="2026-W41.html#hanxinhao000-zerotermux">details ↓</a></li><li><span class="repo"><a href="https://github.com/aoaostar/legado" rel="noopener">aoaostar/legado</a></span> <span class="badge">#10</span><span class="score">⭐ 2.5/10</span> <br><span class="facts">A curated collection of book sources, RSS subscription sources, themes, and typography configs for the 'Legado' (阅读) open-source Android reading app, auto-synced from multiple community sources. · license: none declared · stack fit: low</span> <a class="facts" href="2026-W41.html#aoaostar-legado">details ↓</a></li></ol>
+<p><a href="2026-W41.html">Read the full 2026-W41 issue →</a></p>
+<h2>Archive</h2><ul class="archive">
+<li><a class="week" href="2026-W41.html">2026-W41</a> <span class="meta">(Oct 5 – Oct 11, 2026)</span><span class="meta"> · 10 repos featured</span></li>
+</ul>
+<p class="meta">New issues land weekly. The first regular issue cadence starts with 2026-W43.</p>
+<footer class="site">Digest by the private <a href="https://github.com/Thysrael/Horizon" rel="noopener">repo-radar</a> (built on Thysrael/Horizon, MIT). Scores are LLM-assisted editorial judgment, not investment advice. Facts are public repo data; commentary and translations are original.</footer>
+</main>
+</body>
+</html>
