@@ -9,7 +9,10 @@ generated HTML lives at repo root because Pages serves root, not /docs).
 - `issues/YYYY-Www.md` — radar digests as written by the private radar
   (source of truth; ISO-week filename is the contract).
 - `python3 build.py` — renders issues → `index.html` + one `<week>.html` per
-  issue at repo root. Python 3.9+ stdlib only, no JS, no external assets;
+  issue + `feed.xml` (Atom, one entry per issue, newest first) at repo root.
+  The feed is linked from the site header on every page and auto-discovered
+  via `<link rel="alternate" type="application/atom+xml">`.
+  Python 3.9+ stdlib only, no JS, no external assets;
   dark/light via `prefers-color-scheme`, no toggle.
   `build.py --check` fails if committed HTML is stale — regenerate with
   `python3 build.py` whenever an issue markdown changes.
@@ -19,8 +22,10 @@ generated HTML lives at repo root because Pages serves root, not /docs).
 
 ## Decisions worth remembering
 
-- First public issue is 2026-W41; 2026-W42 was never generated (radar had no
-  fresh scan data) so regular cadence starts at W43. Do not "backfill" W42.
+- First public issue is 2026-W41. 2026-W42 was initially skipped (radar had
+  no fresh scan data), but a W42 digest was generated from the 2026-10-12
+  scan and published 2026-10-13 on the captain's call — the archive is now
+  contiguous from W41; regular weekly cadence continues from W43.
 - Digest markdown is consumed, never edited here; fixes to format belong in
   the radar repo. The parser in build.py targets the digest's section
   structure (`## N. [name](#anchor)` + scorecard table rows License /
@@ -31,3 +36,10 @@ generated HTML lives at repo root because Pages serves root, not /docs).
 Translations and commentary are the radar's original output; facts are public
 repo data. Digest footer credits Thysrael/Horizon (MIT) — keep that
 attribution when restyling.
+
+## Maintaining this file
+
+Keep this file for knowledge useful to almost every future agent session in this project.
+Do not repeat what the codebase already shows; point to the authoritative file or command instead.
+Prefer rewriting or pruning existing entries over appending new ones.
+When updating this file, preserve this bar for all agents and keep entries concise.

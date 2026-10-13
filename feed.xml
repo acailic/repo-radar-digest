@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Foreign Repo Radar</title>
+  <subtitle>Weekly digest of trending CJK GitHub &amp; Gitee repos the West misses — translated, licensed, scored.</subtitle>
+  <id>https://acailic.github.io/repo-radar-digest/</id>
+  <link href="https://acailic.github.io/repo-radar-digest/" rel="alternate" type="text/html"/>
+  <link href="https://acailic.github.io/repo-radar-digest/feed.xml" rel="self" type="application/atom+xml"/>
+  <updated>2026-10-12T06:41:00Z</updated>
+  <entry>
+    <title>🌏 Foreign Repo Radar — 2026-W42</title>
+    <link href="https://acailic.github.io/repo-radar-digest/2026-W42.html" rel="alternate"/>
+    <id>https://acailic.github.io/repo-radar-digest/2026-W42.html</id>
+    <updated>2026-10-12T06:41:00Z</updated>
+    <summary type="text">Scanned 23 GitHub-trending repos (zh/ja/ko, weekly+daily), kept 9 CJK candidates plus 15 community finds (Reddit + GitHub search), featured 10 under-the-radar repos below (10 skipped as too famous, 0 as already noticed by the West, 7 as repeat features). Generated 2026-10-12 06:41 UTC by repo-radar.</summary>
+  </entry>
+  <entry>
+    <title>🌏 Foreign Repo Radar — 2026-W41</title>
+    <link href="https://acailic.github.io/repo-radar-digest/2026-W41.html" rel="alternate"/>
+    <id>https://acailic.github.io/repo-radar-digest/2026-W41.html</id>
+    <updated>2026-10-10T21:41:00Z</updated>
+    <summary type="text">The Chinese-language ecosystem this week skews heavily toward platform-native tooling: scrapers, downloaders, and automation layers built around Bilibili, Douyin, and A-share markets that Western trackers almost never surface. What stands out is how much engineering effort goes into working around closed-platform constraints — danmaku extraction, multi-account check-in bots, gamepad-first clients for consoles — a whole genre of pragmatic hacking that Silicon Valley discourse tends to ignore. The clear pick of the week is LangBot, a genuinely production-grade platform that wires LLMs into virtually every messaging app on the planet, including the Chinese ones (WeChat, DingTalk, Lark, QQ) that Western chatbot frameworks treat as afterthoughts. If you only look at one repo, make it that one.</summary>
+  </entry>
+</feed>
