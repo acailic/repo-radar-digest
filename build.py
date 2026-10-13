@@ -3,7 +3,7 @@
 """Render issues/*.md digests into self-contained static HTML pages.
 
 Usage:
-    python build.py            # build index.html + one page per issue at repo root
+    python build.py            # build index.html + one page per issue + feed.xml
     python build.py --check    # exit 1 if committed HTML is stale (CI guard)
 
 Zero dependencies: Python 3.9+ stdlib only, following the how-to-live-better
@@ -11,7 +11,8 @@ single-file pattern. Output is fully self-contained (inline CSS, no JS,
 no external assets), dark/light via prefers-color-scheme with no toggle.
 
 GitHub Pages serves this repo from main/root, so generated pages live next
-to the sources: index.html plus <YYYY-Www>.html per issue.
+to the sources: index.html plus <YYYY-Www>.html per issue and feed.xml (Atom,
+one entry per issue, newest first).
 """
 
 import argparse
@@ -26,8 +27,10 @@ ISSUES = HERE / "issues"
 SITE_URL = "https://acailic.github.io/repo-radar-digest"
 SITE_TITLE = "Foreign Repo Radar"
 SITE_TAGLINE = "Weekly digest of trending CJK GitHub &amp; Gitee repos the West misses — translated, licensed, scored."
+SITE_TAGLINE_PLAIN = "Weekly digest of trending CJK GitHub & Gitee repos the West misses — translated, licensed, scored."
 
 WEEK_RE = re.compile(r"^\d{4}-W\d{2}$")
+GENERATED_RE = re.compile(r"Generated (\d{4}-\d{2}-\d{2}) (\d{2}:\d{2}) UTC")
 
 
 # --------------------------------------------------------------- markdown
@@ -301,11 +304,12 @@ def shell(title, desc, url, body, extra_head=""):
 <meta property="og:title" content="%s">
 <meta property="og:description" content="%s">
 <meta property="og:url" content="%s">
-%s<style>%s</style>
+%s<link rel="alternate" type="application/atom+xml" title="%s — weekly issues" href="feed.xml">
+<style>%s</style>
 </head>
 <body>
 <main>
-<header class="site"><h1><a href="index.html">🌏 %s</a></h1><p>%s</p></header>
+<header class="site"><h1><a href="index.html">🌏 %s</a></h1><p>%s · <a href="feed.xml">Atom feed</a></p></header>
 %s
 <footer class="site">Digest by the private <a href="https://github.com/Thysrael/Horizon" rel="noopener">repo-radar</a> (built on Thysrael/Horizon, MIT). Scores are LLM-assisted editorial judgment, not investment advice. Facts are public repo data; commentary and translations are original.</footer>
 </main>
@@ -313,7 +317,7 @@ def shell(title, desc, url, body, extra_head=""):
 </html>""" % (
         esc(title), esc_attr(desc), esc_attr(url),
         esc_attr(title), esc_attr(desc), esc_attr(url),
-        extra_head, CSS,
+        extra_head, SITE_TITLE, CSS,
         SITE_TITLE, SITE_TAGLINE, body,
     )
 
@@ -359,6 +363,58 @@ def toplist_html(meta, page=""):
 
 def slugify_name(name):
     return re.sub(r"[^\w-]", "", name.lower().replace("/", "-"))
+
+
+def issue_updated(week, md):
+    """RFC 3339 timestamp for an issue: digest 'Generated …' line if present,
+    else the ISO-week Monday 00:00Z."""
+    m = GENERATED_RE.search(md)
+    if m:
+        return "%sT%s:00Z" % (m.group(1), m.group(2))
+    w = re.match(r"(\d{4})-W(\d{2})$", week or "")
+    if w:
+        try:
+            return date.fromisocalendar(int(w.group(1)), int(w.group(2)), 1).strftime("%Y-%m-%dT00:00:00Z")
+        except ValueError:
+            pass
+    return "1970-01-01T00:00:00Z"
+
+
+def feed_page(issues):
+    """Atom 1.0 feed, one entry per issue, newest first.
+    issues: list of (week, meta, md) as produced by build()."""
+    entries = []
+    for week, meta, md in issues:
+        url = "%s/%s.html" % (SITE_URL, week)
+        title = meta.get("title") or ("%s — %s" % (week, SITE_TITLE))
+        summary = meta.get("pulse") or meta.get("stats") or SITE_TAGLINE_PLAIN
+        summary = re.sub(r"`([^`]+)`", r"\1", summary)
+        summary = strip_md_links_keep_text(re.sub(r"\*\*([^*]+)\*\*", r"\1", summary))
+        entries.append(
+            "  <entry>\n"
+            "    <title>%s</title>\n"
+            '    <link href="%s" rel="alternate"/>\n'
+            "    <id>%s</id>\n"
+            "    <updated>%s</updated>\n"
+            '    <summary type="text">%s</summary>\n'
+            "  </entry>" % (
+                esc_attr(title), esc_attr(url), esc_attr(url), issue_updated(week, md), esc_attr(summary),
+            )
+        )
+    feed_updated = max(issue_updated(w, md) for w, _m, md in issues) if issues else "1970-01-01T00:00:00Z"
+    return (
+        '<?xml version="1.0" encoding="utf-8"?>\n'
+        '<feed xmlns="http://www.w3.org/2005/Atom">\n'
+        "  <title>%s</title>\n"
+        "  <subtitle>%s</subtitle>\n"
+        "  <id>%s/</id>\n"
+        '  <link href="%s/" rel="alternate" type="text/html"/>\n'
+        '  <link href="%s/feed.xml" rel="self" type="application/atom+xml"/>\n'
+        "  <updated>%s</updated>\n"
+        "%s\n"
+        "</feed>\n"
+    ) % (esc_attr(SITE_TITLE), esc_attr(SITE_TAGLINE_PLAIN), esc_attr(SITE_URL),
+         esc_attr(SITE_URL), esc_attr(SITE_URL), feed_updated, "\n".join(entries))
 
 
 # ------------------------------------------------------------------ pages
@@ -423,7 +479,7 @@ def index_page(issues):
             ('<span class="meta">(%s)</span>' % esc(span)) if span else "",
             n, "" if n == 1 else "s"))
     parts.append("</ul>")
-    parts.append('<p class="meta">New issues land weekly. The first regular issue cadence starts with 2026-W43.</p>')
+    parts.append('<p class="meta">New issues land weekly — follow along via the <a href="feed.xml">Atom feed</a>.</p>')
     return shell(SITE_TITLE, SITE_TAGLINE.replace("&amp;", "&"), SITE_URL, "\n".join(parts))
 
 
@@ -450,6 +506,7 @@ def build(check=False):
         outputs[week + ".html"] = page
         metas.append((week, meta, md))
     outputs["index.html"] = index_page(metas)
+    outputs["feed.xml"] = feed_page(metas)
 
     stale = []
     for name, content in sorted(outputs.items()):
