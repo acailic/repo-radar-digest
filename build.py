@@ -437,8 +437,11 @@ def issue_page(md, week):
 
     # Replace the digest's own truncated "Featured repos" summary block and
     # every head-extracted element (title, stats, pulse) with our head + top
-    # list, then render the remaining body after it.
-    body_md = re.sub(r"\*\*Featured repos\*\*.*?(?=\n---)", "", md, count=1, flags=re.S)
+    # list, then render the remaining body after it. The strip must stop at
+    # the radar's *Week over week* diff block (radar PRs #6/#7) which sits
+    # between the featured list and the --- separator, so it stays on the page.
+    wow_stop = r"\n\*\*(?:Week over week|Nedelja prema nedelji)\*\*"
+    body_md = re.sub(r"\*\*Featured repos\*\*.*?(?=\n---|" + wow_stop + ")", "", md, count=1, flags=re.S)
     body_md = re.sub(r"^# .+\n?", "", body_md, count=1, flags=re.M)
     if meta.get("stats"):
         body_md = re.sub(r"^> .+\n?", "", body_md, count=1, flags=re.M)
