@@ -26,6 +26,17 @@ generated HTML lives at repo root because Pages serves root, not /docs).
   no fresh scan data), but a W42 digest was generated from the 2026-10-12
   scan and published 2026-10-13 on the captain's call — the archive is now
   contiguous from W41; regular weekly cadence continues from W43.
+- 2026-W42 permanently carries no *Week over week* (novo/nestalo/držanje)
+  block, and that is not a bug to fix here. The block is powered by the
+  radar's seen-memory `history`, which starts at 2026-W42: W41's run
+  (2026-10-05) predates radar PR #6 (merged 2026-10-11 23:09 UTC) and W42's
+  run (2026-10-12 06:41 UTC) found no `history["2026-W41"]`, so
+  `render_week_diff` omitted it. It cannot be backfilled without fabricating
+  radar data — the radar CLI only live-scans (no re-render path) and W42's
+  editorial content came from the 2026-10-12 scan, which is not stored.
+  Verified 2026-10-14; W43 onward carries the block (history accumulates
+  from W42). build.py preserves the block when present (en + sr titles)
+  instead of stripping it with the Featured-repos summary.
 - Digest markdown is consumed, never edited here; fixes to format belong in
   the radar repo. The parser in build.py targets the digest's section
   structure (`## N. [name](#anchor)` + scorecard table rows License /
