@@ -1,7 +1,8 @@
 # CI lanac repo-radar-digest — isto što i lokalna provera:
-#   1. guard testovi (tests/test_archive.py): svaka objavljena nedelja ima
-#      stranicu i feed stavku; issues/, indeks arhive i feed se poklapaju
-#      (hvata i feed.xml koji publish.sh ne stajluje u `git add`)
+#   1. guard testovi (tests/): svaka objavljena nedelja ima stranicu i feed
+#      stavku; issues/, indeks arhive i feed se poklapaju, a publish.sh
+#      objavljuje stranicu, indeks i feed atomično u jednom komitu
+#      (tests/test_publish.py igra pravu objavu u svežem klonu)
 #   2. build.py --check: generisani HTML/feed je svež
 name: CI
 on:
@@ -18,4 +19,5 @@ jobs:
         with:
           python-version: '3.11'
       - run: python tests/test_archive.py
+      - run: python tests/test_publish.py
       - run: python build.py --check
