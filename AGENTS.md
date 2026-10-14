@@ -16,9 +16,17 @@ generated HTML lives at repo root because Pages serves root, not /docs).
   dark/light via `prefers-color-scheme`, no toggle.
   `build.py --check` fails if committed HTML is stale — regenerate with
   `python3 build.py` whenever an issue markdown changes.
+- `tests/test_archive.py` — archive guard test (zero-dep unittest): issues/,
+  the index.html archive list and feed.xml must cover the same weeks, and
+  every week needs its `<week>.html` page (canonical URL) and feed entry.
+  Run before committing alongside `build.py --check`; CI
+  (`.github/workflows/ci.yml`) runs both on push/PR.
 - `publish.sh <digest.md> [--push]` — the weekly intake: validates ISO-week
   name, copies into `issues/`, rebuilds, commits `publish <week>`. The private
-  radar calls it after each weekly run.
+  radar calls it after each weekly run. KNOWN TRAP: its `git add` lists
+  issues/<week>.md, index.html and *.html but NOT feed.xml — a publish leaves
+  the updated feed uncommitted and CI's archive test fails on the PR. Commit
+  feed.xml too (or fix publish.sh out-of-band) when publishing.
 
 ## Decisions worth remembering
 

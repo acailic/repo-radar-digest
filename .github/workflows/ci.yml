@@ -1,0 +1,21 @@
+# CI lanac repo-radar-digest — isto što i lokalna provera:
+#   1. guard testovi (tests/test_archive.py): svaka objavljena nedelja ima
+#      stranicu i feed stavku; issues/, indeks arhive i feed se poklapaju
+#      (hvata i feed.xml koji publish.sh ne stajluje u `git add`)
+#   2. build.py --check: generisani HTML/feed je svež
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python tests/test_archive.py
+      - run: python build.py --check
