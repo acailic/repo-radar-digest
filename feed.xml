@@ -5,7 +5,14 @@
   <id>https://acailic.github.io/repo-radar-digest/</id>
   <link href="https://acailic.github.io/repo-radar-digest/" rel="alternate" type="text/html"/>
   <link href="https://acailic.github.io/repo-radar-digest/feed.xml" rel="self" type="application/atom+xml"/>
-  <updated>2026-10-12T06:41:00Z</updated>
+  <updated>2026-10-19T06:35:00Z</updated>
+  <entry>
+    <title>🌏 Foreign Repo Radar — 2026-W43</title>
+    <link href="https://acailic.github.io/repo-radar-digest/2026-W43.html" rel="alternate"/>
+    <id>https://acailic.github.io/repo-radar-digest/2026-W43.html</id>
+    <updated>2026-10-19T06:35:00Z</updated>
+    <summary type="text">Scanned 24 GitHub-trending repos (zh/ja/ko, weekly+daily), kept 10 CJK candidates plus 16 community finds (Reddit + GitHub search), featured 10 under-the-radar repos below (10 skipped as too famous, 0 as already noticed by the West, 10 as repeat features). Generated 2026-10-19 06:35 UTC by repo-radar.</summary>
+  </entry>
   <entry>
     <title>🌏 Foreign Repo Radar — 2026-W42</title>
     <link href="https://acailic.github.io/repo-radar-digest/2026-W42.html" rel="alternate"/>
