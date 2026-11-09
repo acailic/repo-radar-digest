@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf9f7">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#141518">
+<title>2026-W46 — Foreign Repo Radar</title>
+<meta name="description" content="The unifying thread this week is infrastructure that makes the web machine-usable: projects that wrap sites in APIs, traverse NATs, resolve DNS faster, and translate pages in place, largely built by developers solving real connectivity and automation problems the Western ecosystem tends to…">
+<link rel="canonical" href="https://acailic.github.io/repo-radar-digest/2026-W46.html">
+<meta property="og:title" content="2026-W46 — Foreign Repo Radar">
+<meta property="og:description" content="The unifying thread this week is infrastructure that makes the web machine-usable: projects that wrap sites in APIs, traverse NATs, resolve DNS faster, and translate pages in place, largely built by developers solving real connectivity and automation problems the Western ecosystem tends to…">
+<meta property="og:url" content="https://acailic.github.io/repo-radar-digest/2026-W46.html">
+<link rel="alternate" type="application/atom+xml" title="Foreign Repo Radar — weekly issues" href="feed.xml">
+<style>
+:root{--bg:#faf9f7;--fg:#1f2328;--muted:#5f6672;--accent:#8a2f2b;--card:#ffffff;
+--border:#e4e1db;--code:#f3f1ec;--th:#f0eee9;--a:#8a2f2b;--quote:#6b7280}
+@media (prefers-color-scheme: dark){:root{--bg:#141518;--fg:#d6d7da;--muted:#9a9da5;
+--accent:#e2a29e;--card:#1c1e22;--border:#2c2f35;--code:#23262b;--th:#23262b;
+--a:#e2a29e;--quote:#a6a9b1}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif}
+main{max-width:46rem;margin:0 auto;padding:1.2rem 1.1rem 4rem}
+header.site{border-bottom:1px solid var(--border);margin-bottom:2rem;padding-bottom:1rem}
+header.site h1{font-size:1.35rem;margin:0 0 .2rem}
+header.site h1 a{color:inherit;text-decoration:none}
+header.site p{margin:0;color:var(--muted);font-size:.95rem}
+h1,h2,h3,h4{line-height:1.3;font-weight:650}
+h1{font-size:1.7rem;margin:1.6rem 0 .8rem}
+h2{font-size:1.25rem;margin:2.2rem 0 .8rem;padding-top:.6rem;border-top:1px solid var(--border)}
+h3{font-size:1.05rem;margin:1.4rem 0 .5rem}
+a{color:var(--a)}
+hr{border:0;border-top:1px solid var(--border);margin:2rem 0}
+blockquote{margin:1rem 0;padding:.6rem 1rem;border-left:3px solid var(--accent);background:var(--card);border-radius:0 .4rem .4rem 0;color:var(--quote)}
+blockquote p{margin:.2rem 0}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:.92rem}
+th,td{border:1px solid var(--border);padding:.45rem .6rem;text-align:left;vertical-align:top}
+th{background:var(--th)}
+code{background:var(--code);border-radius:.25rem;padding:.08rem .3rem;font-size:.88em;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre{background:var(--code);padding:.8rem;border-radius:.4rem;overflow-x:auto}
+pre code{background:none;padding:0}
+.toplist{list-style:none;margin:1rem 0;padding:0}
+.toplist li{background:var(--card);border:1px solid var(--border);border-radius:.5rem;padding:.7rem .9rem;margin:.5rem 0}
+.toplist .repo{font-weight:650}
+.toplist .facts{color:var(--muted);font-size:.9rem;margin-top:.15rem}
+.badge{display:inline-block;font-size:.78rem;border:1px solid var(--border);border-radius:1rem;padding:.02rem .55rem;margin-left:.35rem;color:var(--muted);white-space:nowrap}
+.score{color:var(--accent);font-weight:650}
+.archive{list-style:none;padding:0}
+.archive li{border:1px solid var(--border);border-radius:.5rem;background:var(--card);padding:.8rem 1rem;margin:.5rem 0}
+.archive a.week{font-weight:650;font-size:1.05rem}
+.meta{color:var(--muted);font-size:.9rem}
+footer.site{border-top:1px solid var(--border);margin-top:3rem;padding-top:1rem;color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+<main>
+<header class="site"><h1><a href="index.html">🌏 Foreign Repo Radar</a></h1><p>Weekly digest of trending CJK GitHub &amp; Gitee repos the West misses — translated, licensed, scored. · <a href="feed.xml">Atom feed</a></p></header>
+<h1>🌏 Foreign Repo Radar — 2026-W46</h1>
+<p class="meta">Week of Nov 9 – Nov 15, 2026 · <a href="2026-W46.html">Permalink</a></p>
+<blockquote><p>Scanned <strong>24</strong> GitHub-trending repos (zh/ja/ko, weekly+daily), kept <strong>7</strong> CJK candidates plus <strong>18</strong> community finds (Reddit + GitHub search), featured <strong>10</strong> under-the-radar repos below (12 skipped as too famous, 0 as already noticed by the West, 12 as repeat features). Generated 2026-11-09 20:59 UTC by <code>repo-radar</code>.</p></blockquote>
+<h2>This week&rsquo;s pulse</h2><p>The unifying thread this week is infrastructure that makes the web machine-usable: projects that wrap sites in APIs, traverse NATs, resolve DNS faster, and translate pages in place, largely built by developers solving real connectivity and automation problems the Western ecosystem tends to overlook. Enterprise AI is also maturing quietly in unexpected places, with a full Java Agentic RAG reference implementation that most English-language feeds would never surface. The standout pick is api-anything, which turns any API-less website into a self-healing HTTP endpoint for AI agents and shares learned site behavior through a community catalog — a genuinely clever take on agent-to-web plumbing.</p><h2 id="top">Top of the week</h2><ol class="toplist"><li><span class="repo"><a href="https://github.com/goodnight000/api-anything" rel="noopener">goodnight000/api-anything</a></span> <span class="badge">#1</span><span class="score">⭐ 8.0/10</span> <br><span class="facts">Turns any website without a public API into a callable HTTP API for AI agents. It learns a site's own frontend requests once, shares that knowledge via a community catalog, and self-heals when sites change. · license: MIT · stack fit: high</span> <a class="facts" href="#goodnight000-api-anything">details ↓</a></li><li><span class="repo"><a href="https://github.com/nageoffer/ragent" rel="noopener">nageoffer/ragent</a></span> <span class="badge">#2</span><span class="score">⭐ 7.5/10</span> <br><span class="facts">An enterprise-grade Agentic RAG platform in Java covering the full pipeline: document parsing, hybrid retrieval, intent recognition, query rewriting, session memory, MCP tool invocation, and deep reasoning — built as… · license: Apache-2.0 · stack fit: high</span> <a class="facts" href="#nageoffer-ragent">details ↓</a></li><li><span class="repo"><a href="https://github.com/vastsa/FileCodeBox" rel="noopener">vastsa/FileCodeBox</a></span> <span class="badge">#3</span><span class="score">⭐ 7.0/10</span> <br><span class="facts">FileCodeBox is a lightweight self-hosted file-sharing tool where users upload text or files anonymously and receive a pickup code, letting recipients retrieve them like a package from an express locker. · license: LGPL-3.0 · stack fit: medium</span> <a class="facts" href="#vastsa-filecodebox">details ↓</a></li><li><span class="repo"><a href="https://github.com/johnmarktaylor91/torchlens" rel="noopener">johnmarktaylor91/torchlens</a></span> <span class="badge">#4</span><span class="score">⭐ 7.0/10</span> <br><span class="facts">TorchLens lets you inspect, visualize, and intervene on any operation in any neural network, capturing every activation and gradient plus the full computational graph across PyTorch, JAX, TensorFlow, MLX,… · license: Apache-2.0 · stack fit: medium</span> <a class="facts" href="#johnmarktaylor91-torchlens">details ↓</a></li><li><span class="repo"><a href="https://github.com/armbues/mlx-decision" rel="noopener">armbues/mlx-decision</a></span> <span class="badge">#5</span><span class="score">⭐ 7.0/10</span> <br><span class="facts">Run and fine-tune decision (classification) models locally on Apple Silicon using MLX, answering typed questions with probabilities in a single fast pass instead of text generation. · license: MIT · stack fit: high</span> <a class="facts" href="#armbues-mlx-decision">details ↓</a></li><li><span class="repo"><a href="https://github.com/reacher-z/Awesome-REA" rel="noopener">reacher-z/Awesome-REA</a></span> <span class="badge">#6</span><span class="score">⭐ 6.0/10</span> <br><span class="facts">A curated, source-reviewed collection of tools, case studies, and papers for reverse-engineering websites, games, apps, binaries, firmware, and communication protocols, in English and Chinese. · license: MIT · stack fit: low</span> <a class="facts" href="#reacher-z-awesome-rea">details ↓</a></li><li><span class="repo"><a href="https://github.com/jiwoochris/artex-global" rel="noopener">jiwoochris/artex-global</a></span> <span class="badge">#7</span><span class="score">⭐ 6.0/10</span> <br><span class="facts">Global edition of ARTEX, an LLM multi-agent autonomous penetration-testing framework with a Go backend and Next.js frontend, localized for English (default), Korean, Chinese, Spanish, and Japanese output; published… · license: AGPL-3.0 · stack fit: low</span> <a class="facts" href="#jiwoochris-artex-global">details ↓</a></li><li><span class="repo"><a href="https://github.com/gdy666/lucky" rel="noopener">gdy666/lucky</a></span> <span class="badge">#8</span><span class="score">⭐ 5.5/10</span> <br><span class="facts">A Chinese 'Swiss-army knife' home/SOHO networking tool for routers and NAS devices: IPv6/IPv4 port forwarding, reverse proxy, DDNS, Wake-on-LAN, STUN NAT traversal, ACME certs, cron, and file services… · license: MIT · stack fit: low</span> <a class="facts" href="#gdy666-lucky">details ↓</a></li><li><span class="repo"><a href="https://github.com/immersive-translate/immersive-translate" rel="noopener">immersive-translate/immersive-translate</a></span> <span class="badge">#9</span><span class="score">⭐ 5.0/10</span> <br><span class="facts">An immersive bilingual webpage translation browser extension that also translates input boxes, hovered text, PDFs, EPUBs, subtitle files, and TXT files. · license: none declared · stack fit: low</span> <a class="facts" href="#immersive-translate-immersive-translate">details ↓</a></li><li><span class="repo"><a href="https://github.com/pymumu/smartdns" rel="noopener">pymumu/smartdns</a></span> <span class="badge">#10</span><span class="score">⭐ 5.0/10</span> <br><span class="facts">A local DNS server that resolves the fastest website IPs for the best browsing experience, supporting DoT, DoH, DoQ, and DoH3. · license: GPL-3.0 · stack fit: low</span> <a class="facts" href="#pymumu-smartdns">details ↓</a></li></ol><hr>
+<p><strong>Week over week</strong> (vs 2026-W45)</p>
+<ul>
+<li>🆕 <strong>New this week (10) — all 10 entries are new — no carry-over from last week:</strong> <a href="https://github.com/goodnight000/api-anything" rel="noopener">goodnight000/api-anything</a>, <a href="https://gitee.com/nageoffer/ragent" rel="noopener">nageoffer/ragent</a>, <a href="https://github.com/vastsa/FileCodeBox" rel="noopener">vastsa/FileCodeBox</a>, <a href="https://github.com/johnmarktaylor91/torchlens" rel="noopener">johnmarktaylor91/torchlens</a>, <a href="https://github.com/armbues/mlx-decision" rel="noopener">armbues/mlx-decision</a>, <a href="https://github.com/reacher-z/Awesome-REA" rel="noopener">reacher-z/Awesome-REA</a> +4 more</li>
+<li>🔻 <strong>Dropped since last week (10):</strong> <a href="https://github.com/nano-muse/nanoMuse" rel="noopener">nano-muse/nanoMuse</a>, <a href="https://github.com/vinzdg/codenotch" rel="noopener">vinzdg/codenotch</a>, <a href="https://github.com/duty1g/x64dbg-mcp-server" rel="noopener">duty1g/x64dbg-mcp-server</a>, <a href="https://github.com/Small-tailqwq/dsh-deep-whale" rel="noopener">Small-tailqwq/dsh-deep-whale</a>, <a href="https://github.com/Ephemeral-AI-Lab/layerfs" rel="noopener">Ephemeral-AI-Lab/layerfs</a>, <a href="https://github.com/soumatheusgomes/vibe-coding-toolkit" rel="noopener">soumatheusgomes/vibe-coding-toolkit</a> +4 more</li>
+</ul>
+<hr>
+<h2 id="goodnight000-api-anything">1. goodnight000/api-anything — Turns any website without a public API into a callable HTTP API for AI agents</h2>
+<p><a href="https://github.com/goodnight000/api-anything" rel="noopener">github.com/goodnight000/api-anything</a> · ⭐ 2,963 total (+0 this week) · 📈 ~478/7d · Language: TypeScript · Source: search/fresh-rising · 🆕 new this week</p>
+<blockquote><p><strong>What it is:</strong> Turns any website without a public API into a callable HTTP API for AI agents. It learns a site's own frontend requests once, shares that knowledge via a community catalog, and self-heals when sites change.</p></blockquote>
+<blockquote><p><strong>Why it matters (SR/EU):</strong> For Eastern EU engineering shops it's a direct cost play: replacing browser-automation agent stacks with plain HTTP cuts token and compute costs massively, and the shared-catalog model is an open infrastructure niche Western vendors (Browserbase, Firecrawl) only partially cover.</p></blockquote>
+<p><strong>README highlights (translated):</strong></p>
+<ul>
+<li>Learns the underlying HTTP requests a site's own pages make, then exposes them as plain HTTP calls instead of expensive browser automation</li>
+<li>Ships as an MCP server/skill for Claude Code, Cursor, Codex, Gemini CLI and others; setup via a single npx command, no account or API key</li>
+<li>Shared catalog of learned APIs with cookies and tokens stripped, so every agent benefits from what one agent learned</li>
+<li>Benchmarks: 1.5-2x faster and roughly half the tokens vs. headless-Chrome agents on Goodreads, Google Flights, Netflix, IKEA tasks</li>
+<li>Structured failure output (class/reason/next) and privacy controls (--local-only keeps everything on-machine)</li>
+<li>~3k stars in about a week of existence, MIT licensed, TypeScript/Node &gt;= 22.13, published on npm</li>
+</ul>
+<p><strong>Radar scorecard</strong></p>
+<table><thead><tr><th>Dimension</th><th>Assessment</th></tr></thead><tbody><tr><td>License</td><td>MIT — permissive ✅</td></tr><tr><td>Data confidence</td><td><strong>high</strong> — all signals sampled</td></tr><tr><td>Western equivalent</td><td>Firecrawl / Browserbase MCP tooling (reverse-engineered-API angle is novel)</td></tr><tr><td>Monetization angle</td><td>Host the shared catalog as a managed, SLA-backed 'verified site-API registry' with enterprise self-healing monitoring for sites an org depends on.</td></tr><tr><td>Stack fit (captain)</td><td><strong>high</strong> — Directly accelerates AI-agent automation workflows and could replace brittle scraping in data-pipeline/ETL work the reader builds.</td></tr><tr><td>Western attention</td><td><strong>noticed</strong> — English issues 100%, no notable HN story</td></tr><tr><td>Radar score</td><td>⭐️ <strong>8.0/10</strong> — Novel self-healing learned-API approach with exceptional week-one traction (~3k stars), though already getting noticed in the West caps the 'missed-by-the-West' premium.</td></tr></tbody></table>
+<hr>
+<h2 id="nageoffer-ragent">2. nageoffer/ragent — An enterprise-grade Agentic RAG platform in Java covering the full pipeline: document parsing, hybrid…</h2>
+<p><a href="https://gitee.com/nageoffer/ragent" rel="noopener">gitee.com/nageoffer/ragent</a> · ⭐ 227 total (+0 this week) · 📈 ~6/7d · Language: Java · Source: gitee/rag-kb · 🆕 new this week</p>
+<blockquote><p><strong>What it is:</strong> An enterprise-grade Agentic RAG platform in Java covering the full pipeline: document parsing, hybrid retrieval, intent recognition, query rewriting, session memory, MCP tool invocation, and deep reasoning — built as a production-tested reference implementation for backend engineers moving into AI engineering.</p></blockquote>
+<blockquote><p><strong>Why it matters (SR/EU):</strong> The Java AI ecosystem is thin compared to Python, and this is a rare production-grade Spring-based Agentic RAG blueprint — directly reusable by the many Java/Spring shops in Serbia and Eastern EU (banks, insurers, outsourcers) being pushed into AI features without Python teams.</p></blockquote>
+<p><strong>README highlights (translated):</strong></p>
+<ul>
+<li>Full Agentic RAG chain in Java/Spring AI: hybrid retrieval (vector + keyword + knowledge graph + web search) with RRF fusion and rerank</li>
+<li>Production concerns handled: model tiering with circuit breakers, first-token probing, Redis fair queuing and distributed concurrency control</li>
+<li>Question understanding layer: query rewriting, tree-structured intent recognition, multi-knowledge-base routing</li>
+<li>Session memory: last-N messages plus persisted summaries to control token cost; MCP tool discovery via AgentScope</li>
+<li>Knowledge loop: orchestratable ingestion pipelines, answer provenance, user feedback, Langfuse tracing, admin console</li>
+<li>Positioned as 'first stop for backend devs becoming AI engineers'; built on a real deployed enterprise Agentic RAG system</li>
+</ul>
+<p><strong>Radar scorecard</strong></p>
+<table><thead><tr><th>Dimension</th><th>Assessment</th></tr></thead><tbody><tr><td>License</td><td>Apache-2.0 — permissive ✅</td></tr><tr><td>Data confidence</td><td><strong>high</strong> — all signals sampled</td></tr><tr><td>Western equivalent</td><td>LangChain/LlamaIndex (Python), and partially Dify or Spring AI reference apps on the Java side</td></tr><tr><td>Monetization angle</td><td>Fork it into a white-label 'Agentic RAG for Spring enterprises' offering: paid docs, training, and integration consulting targeting Java-heavy banks and insurers who cannot hire Python AI teams.</td></tr><tr><td>Stack fit (captain)</td><td><strong>high</strong> — Exactly matches the reader's Java/Spring backend + AI agent + insurtech data pipeline profile — a retrieval platform insurers could deploy against policy documents and claims knowledge bases.</td></tr><tr><td>Western attention</td><td><strong>underground</strong> — English issues 0%, no notable HN story</td></tr><tr><td>Radar score</td><td>⭐️ <strong>7.5/10</strong> — Strong, novel-to-the-West Java Agentic RAG engineering with real depth, but modest traction (227 stars, flat week) and part educational/course positioning keep it below top marks.</td></tr></tbody></table>
+<hr>
+<h2 id="vastsa-filecodebox">3. vastsa/FileCodeBox — FileCodeBox is a lightweight self-hosted file-sharing tool where users upload text or files anonymously and…</h2>
+<p><a href="https://github.com/vastsa/FileCodeBox" rel="noopener">github.com/vastsa/FileCodeBox</a> · ⭐ 8,778 total (+83 this week) · Language: Python · Spoken: zh · 🆕 new this week</p>
+<blockquote><p><strong>What it is:</strong> FileCodeBox is a lightweight self-hosted file-sharing tool where users upload text or files anonymously and receive a pickup code, letting recipients retrieve them like a package from an express locker.</p></blockquote>
+<blockquote><p><strong>Why it matters (SR/EU):</strong> It's a polished, battle-tested alternative to Western send-file tools (wormhole, transfer.sh) with built-in MCP support for AI agents — a niche East-European MSPs and dev shops could adopt cheaply for GDPR-friendly on-prem file exchange.</p></blockquote>
+<p><strong>README highlights (translated):</strong></p>
+<ul>
+<li>One-command Docker deployment with admin dashboard, file management, and settings UI</li>
+<li>Shares expire by time, pickup count, or persist forever with automatic cleanup</li>
+<li>Storage backends: local, S3, OneDrive, WebDAV, and OpenDAL — data stays on your infrastructure</li>
+<li>MCP Streamable HTTP support so AI clients can create text/file shares via share_text and share_file tools</li>
+<li>FastAPI + Vue 3 + SQLite stack with dark mode, drag-drop, paste, batch and chunked uploads</li>
+<li>~8.8k stars, active releases, bilingual docs with online demo</li>
+</ul>
+<p><strong>Radar scorecard</strong></p>
+<table><thead><tr><th>Dimension</th><th>Assessment</th></tr></thead><tbody><tr><td>License</td><td>LGPL-3.0 — copyleft ⚠️ flagged</td></tr><tr><td>Data confidence</td><td><strong>high</strong> — all signals sampled</td></tr><tr><td>Western equivalent</td><td>PsiTransfer / transfer.sh (with passcode UX closer to Firefox Send)</td></tr><tr><td>Monetization angle</td><td>Offer a managed/hosted instance for SMEs and insurance brokers needing compliant ephemery document exchange, or sell enterprise support and S3/audit plugin add-ons.</td></tr><tr><td>Stack fit (captain)</td><td><strong>medium</strong> — The MCP/AI-agent integration and self-hosted data-sovereignty angle fit your automation and insurtech-compliance interests, though the Python/Vue stack is outside your Java core.</td></tr><tr><td>Western attention</td><td><strong>underground</strong> — English issues 0%, no notable HN story</td></tr><tr><td>Radar score</td><td>⭐️ <strong>7.0/10</strong> — Strong traction, genuinely underground in the West, and MCP-native AI integration, but the file-share category is well covered by Western alternatives.</td></tr></tbody></table>
+<p>Topics: <code>anonymous</code>, <code>fastapi</code>, <code>filecodebox</code>, <code>mcp</code>, <code>python</code>, <code>tool</code>, <code>vue</code></p>
+<hr>
+<h2 id="johnmarktaylor91-torchlens">4. johnmarktaylor91/torchlens — TorchLens lets you inspect, visualize, and intervene on any operation in any neural network, capturing every…</h2>
+<p><a href="https://github.com/johnmarktaylor91/torchlens" rel="noopener">github.com/johnmarktaylor91/torchlens</a> · ⭐ 705 total (+0 this week) · 📈 ≥36/3d · Source: r/LocalLLaMA · 🆕 new this week</p>
+<blockquote><p><strong>What it is:</strong> TorchLens lets you inspect, visualize, and intervene on any operation in any neural network, capturing every activation and gradient plus the full computational graph across PyTorch, JAX, TensorFlow, MLX, PaddlePaddle, and tinygrad without touching model code.</p></blockquote>
+<blockquote><p><strong>Why it matters (SR/EU):</strong> It's an English-language Western repo that is 'crossing over' rather than underground CJK, so for a Serbia/Eastern EU engineer it's mostly a strong learning tool for mechanistic interpretability rather than a missed-market opportunity.</p></blockquote>
+<p><strong>README highlights (translated):</strong></p>
+<ul>
+<li>Single tl.trace() call logs every tensor operation in a forward pass with zero hooks or code changes</li>
+<li>800+ metadata fields per operation (FLOPs, shapes, parents/children, receptive/projective fields)</li>
+<li>Intervention API: ablate or edit individual heads/modules and fork traces to compare outcomes</li>
+<li>Validated on 6400+ models; Apache-2.0; on PyPI with nightly CI</li>
+<li>Positioned as 'plumbing for mechanistic interpretability', explicitly designed to be driven by AI agents</li>
+<li>Companion site Model Menagerie hosts browsable full graphs of popular models like GPT-2 and Hugging Face ViT</li>
+</ul>
+<p><strong>Radar scorecard</strong></p>
+<table><thead><tr><th>Dimension</th><th>Assessment</th></tr></thead><tbody><tr><td>License</td><td>Apache-2.0 — permissive ✅</td></tr><tr><td>Data confidence</td><td><strong>medium</strong> — missing: recent issues</td></tr><tr><td>Western equivalent</td><td>none found</td></tr><tr><td>Monetization angle</td><td>A hosted 'Model Menagerie as a service' or enterprise interpretability/audit toolkit (regulatory model-inspection reports for EU AI Act compliance) is the most plausible commercial path, though the Apache-2.0 core limits direct licensing revenue.</td></tr><tr><td>Stack fit (captain)</td><td><strong>medium</strong> — Solid fit for the reader's AI-agents interest (agent-driven model debugging), but off-stack for their Java/Spring, insurtech, and ETL work.</td></tr><tr><td>Western attention</td><td><strong>crossing over</strong> — English issues n/a, no notable HN story</td></tr><tr><td>Radar score</td><td>⭐️ <strong>7.0/10</strong> — Genuinely novel, well-engineered, and gaining traction fast (36 stars in 3 days), but it's already Western-facing and outside the reader's core backend stack, so it caps below top marks.</td></tr></tbody></table>
+<p>Topics: <code>activations</code>, <code>computational-graph</code>, <code>deep-learning</code>, <code>explainable-ai</code>, <code>gradients</code>, <code>interpretability</code>, <code>jax</code>, <code>mechanistic-interpretability</code>, <code>neural-networks</code>, <code>pytorch</code></p>
+<hr>
+<h2 id="armbues-mlx-decision">5. armbues/mlx-decision — Run and fine-tune decision (classification) models locally on Apple Silicon using MLX, answering typed…</h2>
+<p><a href="https://github.com/armbues/mlx-decision" rel="noopener">github.com/armbues/mlx-decision</a> · ⭐ 18 total (+0 this week) · 📈 +4/7d · Source: r/LocalLLaMA · 🆕 new this week</p>
+<blockquote><p><strong>What it is:</strong> Run and fine-tune decision (classification) models locally on Apple Silicon using MLX, answering typed questions with probabilities in a single fast pass instead of text generation.</p></blockquote>
+<blockquote><p><strong>Why it matters (SR/EU):</strong> Cheap, private, fast classification is exactly what insurtech triage, claims routing, and document moderation pipelines in Eastern EU need — running classifiers on a Mac with no per-call API cost beats paying per-token for Western LLM APIs.</p></blockquote>
+<p><strong>README highlights (translated):</strong></p>
+<ul>
+<li>Decision models classify/route/score text and images, returning probabilities for allowed answers in milliseconds without token generation</li>
+<li>No-code Studio web app: playground, model comparison, dataset batch evaluation with confusion matrices and calibration, and fine-tuning</li>
+<li>Interfaces: Python API, CLI, Jev-compatible HTTP server, and MCP tool for AI agents</li>
+<li>Fast local fine-tuning: TREC accuracy 86.6%→96.4% in 4 minutes; LoRA fit 30%→90% on 37 pet breeds in 17 minutes</li>
+<li>Privacy-first: no data leaves the Mac, no per-call cost; supports quantization (8-bit/4-bit) and Hugging Face model downloads</li>
+</ul>
+<p><strong>Radar scorecard</strong></p>
+<table><thead><tr><th>Dimension</th><th>Assessment</th></tr></thead><tbody><tr><td>License</td><td>MIT — permissive ✅</td></tr><tr><td>Data confidence</td><td><strong>medium</strong> — missing: recent issues</td></tr><tr><td>Western equivalent</td><td>none found</td></tr><tr><td>Monetization angle</td><td>Package it as an on-prem 'decision server' offering for Balkan insurers and BPO firms needing EU-compliant, no-data-leaves-the-building classification, sold with fine-tuning consulting.</td></tr><tr><td>Stack fit (captain)</td><td><strong>high</strong> — Directly serves AI-agent automation and data-pipeline classification use cases, and could replace expensive LLM calls in insurtech ETL routing steps.</td></tr><tr><td>Western attention</td><td><strong>crossing over</strong> — English issues n/a, no notable HN story</td></tr><tr><td>Radar score</td><td>⭐️ <strong>7.0/10</strong> — Genuinely novel framing (fast non-generative decision models) with strong local fine-tuning story, but tiny traction (18 stars) and Apple-Silicon-only limits deployability.</td></tr></tbody></table>
+<hr>
+<h2 id="reacher-z-awesome-rea">6. reacher-z/Awesome-REA — A curated, source-reviewed collection of tools, case studies, and papers for reverse-engineering websites…</h2>
+<p><a href="https://github.com/reacher-z/Awesome-REA" rel="noopener">github.com/reacher-z/Awesome-REA</a> · ⭐ 2,308 total (+0 this week) · 📈 ~650/7d · Language: Python · Source: search/fresh-ai-agents · 🆕 new this week</p>
+<blockquote><p><strong>What it is:</strong> A curated, source-reviewed collection of tools, case studies, and papers for reverse-engineering websites, games, apps, binaries, firmware, and communication protocols, in English and Chinese.</p></blockquote>
+<blockquote><p><strong>Why it matters (SR/EU):</strong> An unusually deep bilingual corpus of RE cases that documents techniques the Western security/tooling scene scatters across forums — a goldmine for anyone in Eastern EU building automation or anti-bot-hardening work, though it's a reference list, not a library.</p></blockquote>
+<p><strong>README highlights (translated):</strong></p>
+<ul>
+<li>Covers six reverse-engineering domains: websites, games, apps, native binaries, firmware, and protocols</li>
+<li>5,148 curated resources including 3,982 case studies and 263 papers, with 3,309 indexed repositories</li>
+<li>README is auto-generated from JSON data files with an automated discovery-ingest pipeline</li>
+<li>Backed by a searchable website (awesomerea.org) with resources, cases, and papers sections</li>
+<li>Features benchmarks like WebsiteBench (AI agents rebuilding sites via browser exploration) and ClawBench (browser AI agents)</li>
+<li>Includes a companion 'Awesome Computer-Use Agents' catalog of papers, models, datasets, and benchmarks</li>
+</ul>
+<p><strong>Radar scorecard</strong></p>
+<table><thead><tr><th>Dimension</th><th>Assessment</th></tr></thead><tbody><tr><td>License</td><td>MIT — permissive ✅</td></tr><tr><td>Data confidence</td><td><strong>medium</strong> — missing: recent issues</td></tr><tr><td>Western equivalent</td><td>awesome-reverse-engineering (myz-in/awesome-reverse-engineering)</td></tr><tr><td>Monetization angle</td><td>Realistic angle is thin for a link list — at best a paid curated feed/training program or consulting funnel built on top of the case corpus for security audits and anti-bot engineering.</td></tr><tr><td>Stack fit (captain)</td><td><strong>low</strong> — It's an information resource for reverse engineering, not something directly adoptable into a Java/insurtech/ETL stack, though the browser-agent benchmarks brush against the reader's AI-agent interest.</td></tr><tr><td>Western attention</td><td><strong>underground</strong> — English issues n/a, no notable HN story</td></tr><tr><td>Radar score</td><td>⭐️ <strong>6.0/10</strong> — Solid traction and genuinely novel corpus scale, but it's a curated list with a Western equivalent and low direct fit to the reader's engineering stack.</td></tr></tbody></table>
+<p>Topics: <code>agent-skills</code>, <code>ai-agents</code>, <code>android-reverse-engineering</code>, <code>awesome</code>, <code>awesome-list</code>, <code>awesome-resources</code>, <code>binary-analysis</code>, <code>decompilation</code>, <code>firmware-analysis</code>, <code>game-reversing</code></p>
+<hr>
+<h2 id="jiwoochris-artex-global">7. jiwoochris/artex-global — Global edition of ARTEX, an LLM multi-agent autonomous penetration-testing framework with a Go backend and…</h2>
+<p><a href="https://github.com/jiwoochris/artex-global" rel="noopener">github.com/jiwoochris/artex-global</a> · ⭐ 2,970 total (+0 this week) · 📈 ~558/7d · Language: Go · Source: search/fresh-rising · 🆕 new this week</p>
+<blockquote><p><strong>What it is:</strong> Global edition of ARTEX, an LLM multi-agent autonomous penetration-testing framework with a Go backend and Next.js frontend, localized for English (default), Korean, Chinese, Spanish, and Japanese output; published strictly for authorized defensive and detection use.</p></blockquote>
+<blockquote><p><strong>Why it matters (SR/EU):</strong> Mostly curiosity with a defensive twist: as an insurtech-heavy region processing sensitive personal data, Serbian/Eastern EU security teams could use its detection signatures and hardening material to understand autonomous AI attack tradecraft before Western vendors package it.</p></blockquote>
+<p><strong>README highlights (translated):</strong></p>
+<ul>
+<li>LLM-driven agents autonomously plan and execute penetration tests: decomposing goals, running real tools, and accumulating assets/vulnerabilities into a graph</li>
+<li>Ships as a single Go binary with an embedded Next.js frontend; all data stored in PostgreSQL</li>
+<li>User-facing output (reports, summaries, chat) forced into the selected language while internal reasoning prompts stay in the original language to preserve benchmarked performance</li>
+<li>Heavy legal warnings: upstream ARTEX was reportedly linked by Korean media (Oct 2026) to personal-data breaches at Korean financial institutions — investigation ongoing</li>
+<li>Includes a Defense &amp; Detection Guide with detection signatures and hardening checklists against autonomous AI attacks</li>
+<li>Upstream Chinese repo (Autumn-27/ARTEX) currently unreachable; this fork adapts it for global adoption under AGPL-3.0</li>
+</ul>
+<p><strong>Radar scorecard</strong></p>
+<table><thead><tr><th>Dimension</th><th>Assessment</th></tr></thead><tbody><tr><td>License</td><td>AGPL-3.0 — copyleft ⚠️ flagged</td></tr><tr><td>Data confidence</td><td><strong>high</strong> — all signals sampled</td></tr><tr><td>Western equivalent</td><td>Caleb Chen / PentestGPT, XBOW (commercial), CAI (Cybersecurity AI framework)</td></tr><tr><td>Monetization angle</td><td>Sell the defensive side: a hosted purple-team / detection-tuning service or enterprise workshops built on its detection signatures and hardening checklists for financial and insurtech clients — the offensive core itself is AGPL and reputationally toxic to commercialize.</td></tr><tr><td>Stack fit (captain)</td><td><strong>low</strong> — Autonomous offensive security tooling in Go sits far outside a Java/Spring insurtech and data-pipeline stack; value is limited to defensive awareness.</td></tr><tr><td>Western attention</td><td><strong>underground</strong> — English issues 80%, no notable HN story</td></tr><tr><td>Radar score</td><td>⭐️ <strong>6.0/10</strong> — Strong underground traction (~558 stars/week) and genuinely novel to the West, but legal controversy, misuse risk, and near-zero overlap with the reader's stack cap its practical value.</td></tr></tbody></table>
+<p>Topics: <code>ai-agent</code>, <code>autonomous-agents</code>, <code>blue-team</code>, <code>cybersecurity</code>, <code>detection-engineering</code>, <code>i18n</code>, <code>korean</code>, <code>llm</code>, <code>penetration-testing</code>, <code>security</code></p>
+<hr>
+<h2 id="gdy666-lucky">8. gdy666/lucky — A Chinese 'Swiss-army knife' home/SOHO networking tool for routers and NAS devices: IPv6/IPv4 port…</h2>
+<p><a href="https://github.com/gdy666/lucky" rel="noopener">github.com/gdy666/lucky</a> · ⭐ 8,361 total (+67 this week) · Language: Go · Spoken: zh · 🆕 new this week</p>
+<blockquote><p><strong>What it is:</strong> A Chinese 'Swiss-army knife' home/SOHO networking tool for routers and NAS devices: IPv6/IPv4 port forwarding, reverse proxy, DDNS, Wake-on-LAN, STUN NAT traversal, ACME certs, cron, and file services (FTP/WebDAV/rclone/FileBrowser) in one web UI.</p></blockquote>
+<blockquote><p><strong>Why it matters (SR/EU):</strong> Mostly a homelab/infra curiosity for a Java/insurtech engineer, but notable as a proven model for bundling network self-hosting ops cheaply — relevant where Eastern EU small businesses self-host on VPS/router hardware instead of paying Western SaaS prices.</p></blockquote>
+<p><strong>README highlights (translated):</strong></p>
+<ul>
+<li>All-in-one web panel covering DDNS, reverse proxy, TCP/UDP port forwarding, ACME TLS, and static sites</li>
+<li>NAT traversal via STUN, Cloudflared, and FRP; built for public-IPv6-to-private-IPv4 forwarding on routers</li>
+<li>File services: WebDAV, Samba, FTP, FileBrowser, DLNA, Rclone</li>
+<li>Security features include Coraza WAF, IP filtering, security groups, third-party auth, Passkey management</li>
+<li>Runs on Linux/Windows/macOS/OpenWrt routers/NAS/Docker; 8.3k stars with strong CJK-community adoption</li>
+<li>Warning: repo source stops at v1.4.10; newer releases are closed-source — the project is no longer truly open source</li>
+</ul>
+<p><strong>Radar scorecard</strong></p>
+<table><thead><tr><th>Dimension</th><th>Assessment</th></tr></thead><tbody><tr><td>License</td><td>MIT — permissive ✅</td></tr><tr><td>Data confidence</td><td><strong>medium</strong> — missing: recent issues</td></tr><tr><td>Western equivalent</td><td>Nginx Proxy Manager / Cloudflare Tunnel / ddclient bundled together; closest single project is maybe Caddy+ddclient+FRP, none found as one tool</td></tr><tr><td>Monetization angle</td><td>The realistic angle is the pattern, not the product: a paid/hosted 'network ops panel for small business' (DDNS + reverse proxy + NAT traversal + file services) targeting price-sensitive Eastern EU SMEs; the repo itself went closed-source, which signals the author is already monetizing it.</td></tr><tr><td>Stack fit (captain)</td><td><strong>low</strong> — It's Go networking/self-hosting tooling with no overlap with the reader's Java/Spring, AI-agent, or data-pipeline stack.</td></tr><tr><td>Western attention</td><td><strong>underground</strong> — English issues n/a, no notable HN story</td></tr><tr><td>Radar score</td><td>⭐️ <strong>5.5/10</strong> — Real traction and genuinely novel feature bundling underground in the West, but closed-source drift and near-zero stack fit for this reader cap its value.</td></tr></tbody></table>
+<p>Topics: <code>acme</code>, <code>aliyunpan</code>, <code>cron</code>, <code>ddns</code>, <code>dynadot</code>, <code>filebrowser</code>, <code>ftp</code>, <code>ipv6</code>, <code>socat</code>, <code>stun</code></p>
+<hr>
+<h2 id="immersive-translate-immersive-translate">9. immersive-translate/immersive-translate — An immersive bilingual webpage translation browser extension that also translates input boxes, hovered text…</h2>
+<p><a href="https://github.com/immersive-translate/immersive-translate" rel="noopener">github.com/immersive-translate/immersive-translate</a> · ⭐ 19,687 total (+120 this week) · Spoken: zh · 🆕 new this week</p>
+<blockquote><p><strong>What it is:</strong> An immersive bilingual webpage translation browser extension that also translates input boxes, hovered text, PDFs, EPUBs, subtitle files, and TXT files.</p></blockquote>
+<blockquote><p><strong>Why it matters (SR/EU):</strong> Mostly curiosity for the captain: it's a distribution repo for a closed-source product, but its bilingual side-by-side UX pattern is a proven design worth copying in Western tooling and for multilingual insurance-document workflows in Eastern EU.</p></blockquote>
+<p><strong>README highlights (translated):</strong></p>
+<ul>
+<li>Displays original text and translation side-by-side in-place, preserving reading context for articles, papers, and study material</li>
+<li>Handles full-page, selection, hover, and input-box translation plus documents (PDF with preserved layout, EPUB, TXT, HTML, subtitles)</li>
+<li>Supports bilingual subtitles for online videos and meetings, plus image and manga translation</li>
+<li>Pluggable translation engines including custom APIs, with terminology and domain settings on some services</li>
+<li>NOT open source: repo is release distribution + issue tracker only; the old open-source version was archived in January 2023</li>
+<li>~19.7k stars with steady weekly growth despite a Chinese-only README</li>
+</ul>
+<p><strong>Radar scorecard</strong></p>
+<table><thead><tr><th>Dimension</th><th>Assessment</th></tr></thead><tbody><tr><td>License</td><td>none declared — 🔴 no license — red flag</td></tr><tr><td>Data confidence</td><td><strong>high</strong> — all signals sampled</td></tr><tr><td>Western equivalent</td><td>none found (closest analogues: Google Translate's page overlay and Toucan, but neither matches the bilingual-layout PDF/ebook depth)</td></tr><tr><td>Monetization angle</td><td>The model is already proven: freemium extension with paid AI-engine tiers — clone the side-by-side document UX for a GDPR-compliant EU-hosted vertical product (e.g., insurance policy translation for Serbian/EU multilingual markets).</td></tr><tr><td>Stack fit (captain)</td><td><strong>low</strong> — A closed-source browser extension has no direct fit with Java/Spring, ETL, or AI-agent work beyond UX inspiration.</td></tr><tr><td>Western attention</td><td><strong>underground</strong> — English issues 0%, no notable HN story</td></tr><tr><td>Radar score</td><td>⭐️ <strong>5.0/10</strong> — Real traction and a genuinely superior UX, but no source code and the West already knows the product somewhat — low engineering value, moderate commercial inspiration.</td></tr></tbody></table>
+<p>Topics: <code>chrome-extension</code>, <code>safari-extension</code>, <code>translation</code>, <code>userscript</code></p>
+<hr>
+<h2 id="pymumu-smartdns">10. pymumu/smartdns — A local DNS server that resolves the fastest website IPs for the best browsing experience, supporting DoT…</h2>
+<p><a href="https://github.com/pymumu/smartdns" rel="noopener">github.com/pymumu/smartdns</a> · ⭐ 11,394 total (+39 this week) · Language: C · Spoken: zh · 🆕 new this week</p>
+<blockquote><p><strong>What it is:</strong> A local DNS server that resolves the fastest website IPs for the best browsing experience, supporting DoT, DoH, DoQ, and DoH3.</p></blockquote>
+<blockquote><p><strong>Why it matters (SR/EU):</strong> For Serbian/Eastern EU engineers it's a self-hostable latency-optimizing DNS that cuts cross-border routing pain (a real issue with EU/US CDN edge selection) and is a proven pattern for building high-performance C network services locally.</p></blockquote>
+<p><strong>README highlights (translated):</strong></p>
+<ul>
+<li>Queries multiple upstream DNS servers simultaneously and returns the lowest-latency IP to clients (measured 5x faster than AliDNS in demo)</li>
+<li>Supports UDP, TCP, DoT, DoH, DoQ, DoH3, plus queries via socks5/HTTP proxies</li>
+<li>Per-client rules via MAC/IP (parental control), domain-based traffic splitting, and ad filtering with &lt;1ms matching on 200k rules</li>
+<li>Runs on Linux, Raspberry Pi, OpenWrt, Asus router firmware, and Windows/WSL; DNS64 and IPv4/IPv6 dual-stack supported</li>
+<li>Multi-threaded async I/O with caching; ships in official package feeds of mainstream router systems</li>
+<li>GPL-3.0 licensed, ~11.4k stars, funded by donations</li>
+</ul>
+<p><strong>Radar scorecard</strong></p>
+<table><thead><tr><th>Dimension</th><th>Assessment</th></tr></thead><tbody><tr><td>License</td><td>GPL-3.0 — copyleft ⚠️ flagged</td></tr><tr><td>Data confidence</td><td><strong>high</strong> — all signals sampled</td></tr><tr><td>Western equivalent</td><td>dnsmasq / AdGuard Home</td></tr><tr><td>Monetization angle</td><td>Realistic angles are thin given AdGuard Home's dominance: package a pre-tuned SmartDNS appliance/managed router firmware for SMEs, or sell enterprise support and per-client policy features as a commercial fork.</td></tr><tr><td>Stack fit (captain)</td><td><strong>low</strong> — It's networking infrastructure in C, far from the reader's Java/Spring, insurtech, and data-pipeline focus.</td></tr><tr><td>Western attention</td><td><strong>underground</strong> — English issues 25%, no notable HN story</td></tr><tr><td>Radar score</td><td>⭐️ <strong>5.0/10</strong> — Mature, genuinely differentiated from dnsmasq-style all-servers logic, but the West already has AdGuard Home and it's off-stack for the reader.</td></tr></tbody></table>
+<p>Topics: <code>c</code>, <code>dns</code>, <code>dns-over-https</code>, <code>dns-over-tls</code>, <code>dns-server</code>, <code>dns64</code>, <code>doh</code>, <code>doh3</code>, <code>doq</code>, <code>dot</code></p>
+<hr>
+<p>*Foreign Repo Radar is built on <a href="https://github.com/Thysrael/Horizon" rel="noopener">Thysrael/Horizon</a> (MIT). Scores are LLM-assisted editorial judgment, not investment advice.*</p>
+<footer class="site">Digest by the private <a href="https://github.com/Thysrael/Horizon" rel="noopener">repo-radar</a> (built on Thysrael/Horizon, MIT). Scores are LLM-assisted editorial judgment, not investment advice. Facts are public repo data; commentary and translations are original.</footer>
+</main>
+</body>
+</html>

@@ -5,7 +5,14 @@
   <id>https://acailic.github.io/repo-radar-digest/</id>
   <link href="https://acailic.github.io/repo-radar-digest/" rel="alternate" type="text/html"/>
   <link href="https://acailic.github.io/repo-radar-digest/feed.xml" rel="self" type="application/atom+xml"/>
-  <updated>2026-11-02T06:23:00Z</updated>
+  <updated>2026-11-09T20:59:00Z</updated>
+  <entry>
+    <title>🌏 Foreign Repo Radar — 2026-W46</title>
+    <link href="https://acailic.github.io/repo-radar-digest/2026-W46.html" rel="alternate"/>
+    <id>https://acailic.github.io/repo-radar-digest/2026-W46.html</id>
+    <updated>2026-11-09T20:59:00Z</updated>
+    <summary type="text">The unifying thread this week is infrastructure that makes the web machine-usable: projects that wrap sites in APIs, traverse NATs, resolve DNS faster, and translate pages in place, largely built by developers solving real connectivity and automation problems the Western ecosystem tends to overlook. Enterprise AI is also maturing quietly in unexpected places, with a full Java Agentic RAG reference implementation that most English-language feeds would never surface. The standout pick is api-anything, which turns any API-less website into a self-healing HTTP endpoint for AI agents and shares learned site behavior through a community catalog — a genuinely clever take on agent-to-web plumbing.</summary>
+  </entry>
   <entry>
     <title>🌏 Foreign Repo Radar — 2026-W45</title>
     <link href="https://acailic.github.io/repo-radar-digest/2026-W45.html" rel="alternate"/>
