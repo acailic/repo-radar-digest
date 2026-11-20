@@ -5,7 +5,14 @@
   <id>https://acailic.github.io/repo-radar-digest/</id>
   <link href="https://acailic.github.io/repo-radar-digest/" rel="alternate" type="text/html"/>
   <link href="https://acailic.github.io/repo-radar-digest/feed.xml" rel="self" type="application/atom+xml"/>
-  <updated>2026-11-09T20:59:00Z</updated>
+  <updated>2026-11-20T17:18:00Z</updated>
+  <entry>
+    <title>🌏 Foreign Repo Radar — 2026-W47</title>
+    <link href="https://acailic.github.io/repo-radar-digest/2026-W47.html" rel="alternate"/>
+    <id>https://acailic.github.io/repo-radar-digest/2026-W47.html</id>
+    <updated>2026-11-20T17:18:00Z</updated>
+    <summary type="text">Two threads dominate this roundup: multi-agent autonomy that actually ships, and tooling built for audiences the English-speaking scene tends to ignore. N1nEmAn/sapper-v2 is the standout — a model-agnostic orchestration harness whose commander-general-soldier &quot;pentest legion&quot; took first place in a Tencent attack-defense challenge fully unattended, burning 1B tokens to beat a runner-up spending 4.5B, and it hints at where long-horizon cooperative agents go next. Around it sit quieter gems the West is largely sleeping on: Fudan&#x27;s MOSS-Image bringing disciplined text rendering and layout control to an open 5B DiT, deepopen&#x27;s non-autoregressive intent engine treating LLMs as probability-emitting classifiers rather than chatterboxes, and a thriving fringe of Chinese-language tooling from real-time visual novel translation to light-novel machine-translation pipelines. If you only clone one thing, make it sapper-v2.</summary>
+  </entry>
   <entry>
     <title>🌏 Foreign Repo Radar — 2026-W46</title>
     <link href="https://acailic.github.io/repo-radar-digest/2026-W46.html" rel="alternate"/>
